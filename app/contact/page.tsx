@@ -60,8 +60,9 @@ export default function Contact() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 opacity-40 blur-3xl"></div>
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(147,51,234,0.4)_0%,_transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(236,72,153,0.4)_0%,_transparent_50%)]"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <span className="text-slate-900 font-bold text-lg mb-4 block">
             Contact <span className="text-slate-400">us</span>
@@ -79,11 +80,11 @@ export default function Contact() {
       </section>
 
       {/* Main Contact Content */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Side: Content */}
-          <div>
-            <h2 className="text-3xl font-bold text-[#6366f1] mb-6">Why Reach Out?</h2>
+          <div className="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 p-8 rounded-3xl border-2 border-purple-300 shadow-xl">
+            <h2 className="text-3xl font-bold text-purple-700 mb-6">Why Reach Out?</h2>
             <div className="space-y-4 text-slate-600 mb-10 leading-relaxed">
               <p>If you&apos;re serious about turning content into cashflow, we should talk.</p>
               <p>
@@ -91,8 +92,8 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="bg-slate-50/50 p-6 rounded-xl mb-10 border border-slate-100">
-              <span className="text-sm font-semibold text-slate-400 mb-4 block">
+            <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-6 rounded-xl mb-10 border-2 border-pink-300 shadow-lg">
+              <span className="text-sm font-semibold text-purple-800 mb-4 block">
                 Use this form if you:
               </span>
               <ul className="space-y-4">
@@ -103,7 +104,7 @@ export default function Contact() {
                   "Want to explore a strategic partnership",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <span className="text-slate-400 mt-1">
+                    <span className="text-purple-600 mt-1 bg-purple-100 rounded-full p-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
                           d="M5 13l4 4L19 7"
@@ -113,32 +114,32 @@ export default function Contact() {
                         />
                       </svg>
                     </span>
-                    <span className="text-slate-700 font-medium">{item}</span>
+                    <span className="text-slate-800 font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="font-bold text-slate-800">Prefer a Direct Conversation?</h3>
+            <div className="space-y-4 bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300 shadow-lg">
+              <h3 className="font-bold text-slate-900 text-lg">Prefer a Direct Conversation?</h3>
               <p className="text-slate-500 text-sm">
                 If you&apos;d rather skip forms, schedule a call with our team.
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center text-slate-900 font-bold hover:text-[#6366f1] transition-colors"
+                className="inline-flex items-center text-purple-700 font-bold hover:text-pink-600 transition-colors text-lg"
               >
                 Schedule a Call <span className="ml-2">→</span>
               </Link>
-              <p className="text-slate-400 text-xs">
+              <p className="text-slate-600 text-xs">
                 (You can connect this to Calendly or Google Calendar)
               </p>
             </div>
           </div>
 
           {/* Right Side: Form */}
-          <div className="border border-indigo-100 p-8 lg:p-12 shadow-2xl bg-white rounded-[2rem]">
-            <h2 className="text-2xl font-bold text-slate-800 mb-8">
+          <div className="border-2 border-pink-300 p-8 lg:p-12 shadow-2xl bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 rounded-[2rem]">
+            <h2 className="text-2xl font-bold text-purple-800 mb-8">
               Tell Us About Your Project
             </h2>
 
@@ -154,7 +155,7 @@ export default function Contact() {
                   required
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1] outline-none transition-all placeholder:text-slate-300"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-purple-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-slate-400 bg-white"
                   placeholder="Your name"
                 />
               </div>
@@ -170,7 +171,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1] outline-none transition-all placeholder:text-slate-300"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-purple-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-slate-400 bg-white"
                   placeholder="your@email.com"
                 />
               </div>
@@ -229,7 +230,7 @@ export default function Contact() {
                 <textarea
                   value={formData.goals}
                   onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1] outline-none transition-all placeholder:text-slate-300"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-purple-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-slate-400 bg-white"
                   placeholder="Briefly Describe Your Goals"
                   rows={3}
                 />
@@ -239,7 +240,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#5d5fff] hover:bg-indigo-700 text-white font-bold py-4 rounded-xl flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.01] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 hover:from-purple-700 hover:via-pink-600 hover:to-blue-600 text-white font-bold py-4 rounded-xl flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed shadow-xl"
               >
                 <span>{isSubmitting ? "Submitting..." : "Book a Strategy Call"}</span>
                 {!isSubmitting && (
@@ -269,7 +270,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Options */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Contact Options</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -318,11 +319,11 @@ export default function Contact() {
           ].map((option, index) => (
             <div
               key={index}
-              className="bg-slate-50/80 p-8 rounded-2xl text-center border border-slate-100 hover:shadow-lg transition-shadow"
+              className="bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 p-8 rounded-2xl text-center border-2 border-purple-300 hover:shadow-2xl hover:border-pink-400 hover:scale-105 transition-all"
             >
-              <div className="flex justify-center mb-4 text-[#6366f1]">{option.icon}</div>
+              <div className="flex justify-center mb-4 text-purple-600">{option.icon}</div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">{option.title}</h3>
-              <p className="text-slate-600 font-medium">{option.content}</p>
+              <p className="text-slate-700 font-semibold">{option.content}</p>
             </div>
           ))}
         </div>

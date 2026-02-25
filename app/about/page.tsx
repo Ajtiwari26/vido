@@ -10,9 +10,9 @@ export default function About() {
   return (
     <main className="pt-24">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-16 px-6">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-10 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-br from-purple-400 to-pink-400 blur-3xl"></div>
+      <section className="relative overflow-hidden pt-20 pb-16 px-6 bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-30 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-br from-purple-400 via-pink-400 to-blue-400 blur-3xl"></div>
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
@@ -29,8 +29,9 @@ export default function About() {
       </section>
 
       {/* Content Card */}
-      <section className="max-w-5xl mx-auto px-6 mb-32">
-        <div className="bg-white rounded-[2rem] p-12 md:p-20 shadow-xl border border-indigo-100 text-center">
+      <section className="max-w-5xl mx-auto px-6 mb-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 -z-10 blur-3xl"></div>
+        <div className="bg-gradient-to-br from-white via-purple-50 to-pink-50 rounded-[2rem] p-12 md:p-20 shadow-2xl border-2 border-purple-200 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-900">
             Turning Content Into Cashflow
           </h2>
@@ -49,15 +50,15 @@ export default function About() {
       </section>
 
       {/* Who We Are */}
-      <section className="max-w-7xl mx-auto px-6 mb-32 text-center">
+      <section className="max-w-7xl mx-auto px-6 mb-32 text-center bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 py-20 rounded-3xl">
         <h2 className="text-5xl md:text-7xl font-extrabold text-[#2D2D2D] mb-6">
           Who We Are
         </h2>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-10">
           A behind-the-scenes content execution studio for creators an brands who value systems over hacks.
         </p>
-        <div className="inline-block bg-white border border-indigo-100 rounded-full px-8 py-3 shadow-sm">
-          <p className="text-indigo-600 font-semibold text-lg">
+        <div className="inline-block bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 rounded-full px-8 py-3 shadow-lg">
+          <p className="text-purple-700 font-semibold text-lg">
             We don&apos;t sell videos. We build content engines.
           </p>
         </div>

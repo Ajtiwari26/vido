@@ -5,8 +5,9 @@ export default function Home() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] pt-24 pb-32 px-6 overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/30 via-transparent to-transparent -z-10 blur-3xl"></div>
+      <section className="relative min-h-[75vh] pt-24 pb-32 px-6 overflow-hidden bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/50 via-pink-300/30 to-transparent blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-blue-400/40 via-transparent to-transparent blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
@@ -58,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 px-6 bg-gradient-to-br from-purple-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Text Content */}
           <div>
@@ -94,7 +95,7 @@ export default function Home() {
             ].map((card, index) => (
               <div
                 key={index}
-                className="group border border-gray-100 p-6 rounded-2xl bg-gray-50/50 hover:bg-white hover:shadow-xl hover:shadow-gray-100 transition-all cursor-pointer flex justify-between items-center"
+                className="group border-2 border-purple-200 p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 hover:shadow-2xl hover:border-purple-300 transition-all cursor-pointer flex justify-between items-center"
               >
                 <div>
                   <h3 className="font-extrabold text-xl text-gray-900 mb-1">
@@ -102,7 +103,7 @@ export default function Home() {
                   </h3>
                   <p className="text-sm text-gray-500">{card.description}</p>
                 </div>
-                <div className="text-gray-400 group-hover:text-indigo-600 transition-colors">
+                <div className="text-gray-400 group-hover:text-pink-600 transition-colors">
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -124,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* What We Handle Section */}
-      <section className="py-24 px-6 bg-[#fafafa]">
+      <section className="py-24 px-6 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4">What We Handle For You</h2>
@@ -213,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Qualification Section */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 px-6 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-4">
@@ -226,7 +227,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* We Work Best With */}
-            <div className="bg-[#f9fafb] p-10 rounded-3xl border border-gray-100">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-10 rounded-3xl border-2 border-green-200 shadow-lg">
               <h3 className="text-2xl font-extrabold mb-8 text-gray-900">
                 We Work Best With:
               </h3>
@@ -253,7 +254,7 @@ export default function Home() {
             </div>
 
             {/* We're Not For */}
-            <div className="bg-[#f9fafb] p-10 rounded-3xl border border-gray-100">
+            <div className="bg-gradient-to-br from-red-50 to-pink-100 p-10 rounded-3xl border-2 border-red-200 shadow-lg">
               <h3 className="text-2xl font-extrabold mb-8 text-gray-900">
                 We&apos;re Not For:
               </h3>
@@ -287,13 +288,13 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 px-6 bg-[#fafafa]">
+      <section className="py-24 px-6 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-center text-4xl font-extrabold mb-16">
             What Working With Us Feels Like
           </h2>
 
-          <div className="bg-white rounded-[3rem] p-12 border border-gray-100 shadow-sm">
+          <div className="bg-gradient-to-br from-white to-purple-50 rounded-[3rem] p-12 border-2 border-purple-200 shadow-2xl">
             <h4 className="text-lg font-bold mb-8">Latest reviews</h4>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -325,7 +326,7 @@ export default function Home() {
               ].map((review, index) => (
                 <div
                   key={index}
-                  className="border border-gray-100 p-8 rounded-2xl flex flex-col justify-between"
+                  className="border-2 border-purple-200 bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl flex flex-col justify-between hover:shadow-xl transition-all"
                 >
                   <div>
                     <div className="flex text-orange-400 mb-4">

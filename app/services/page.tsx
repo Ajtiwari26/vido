@@ -96,7 +96,9 @@ export default function Services() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(99,102,241,0.3)_0%,_transparent_50%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(236,72,153,0.3)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <span className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4 block">
             Services
@@ -114,13 +116,13 @@ export default function Services() {
       </section>
 
       {/* Service Grid */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <article
                 key={index}
-                className="bg-[#fdfdfd] border border-[#f1f5f9] p-10 rounded-[40px] shadow-sm flex flex-col hover:-translate-y-1 transition-transform"
+                className="bg-gradient-to-br from-white to-purple-50 border-2 border-purple-200 p-10 rounded-[40px] shadow-xl flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all"
               >
                 <div className="flex items-center gap-3 mb-4 text-[#6366f1]">
                   {service.icon}
@@ -176,7 +178,7 @@ export default function Services() {
       </section>
 
       {/* How Engagements Work */}
-      <section className="py-24 bg-white text-center">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6">
             How Engagements Work
