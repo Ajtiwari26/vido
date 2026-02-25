@@ -6,21 +6,67 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { fullName, email, role, services, goals } = body;
 
+    // Get environment variables with fallbacks
+    const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
+    const smtpPort = parseInt(process.env.SMTP_PORT || "587");
+    const smtpUser = process.env.SMTP_USER || "vidovermedia@gmail.com";
+    const smtpPassword = process.env.SMTP_PASSWORD;
+    const emailFrom = process.env.EMAIL_FROM || "vidovermedia@gmail.com";
+    const emailTo = process.env.EMAIL_TO || "vidovermedia@gmail.com";
+
+    // Debug log (remove password for security)
+    console.log("📧 Email Configuration:", {
+      smtpHost,
+      smtpPort,
+      smtpUser,
+      emailFrom,
+      emailTo,
+      hasPassword: !!smtpPassword,
+    });
+
+    // Validate required environment variables
+    if (!smtpPassword) {
+      console.error("❌ SMTP_PASSWORD is not set in environment variables");
+      return NextResponse.json(
+        { error: "Email service is not configured. Please contact us directly at vidovermedia@gmail.com" },
+        { status: 500 }
+      );
+    }
+
+    if (!emailTo) {
+      console.error("❌ EMAIL_TO is not set in environment variables");
+      return NextResponse.json(
+        { error: "Email recipient is not configured." },
+        { status: 500 }
+      );
+    }
+
     // Create transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || "587"),
+      host: smtpHost,
+      port: smtpPort,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD,
+        user: smtpUser,
+        pass: smtpPassword,
       },
+      debug: true, // Enable debug output
+      logger: true, // Log to console
     });
+
+    // Verify transporter configuration
+    try {
+      await transporter.verify();
+      console.log("✅ SMTP connection verified");
+    } catch (verifyError) {
+      console.error("❌ SMTP verification failed:", verifyError);
+      throw verifyError;
+    }
 
     // Email content
     const mailOptions = {
-      from: `"Vidovermedia Website" <${process.env.EMAIL_FROM}>`,
-      to: process.env.EMAIL_TO,
+      from: `"Vidovermedia Website" <${emailFrom}>`,
+      to: emailTo,
       subject: `🔔 New Contact Form Submission from ${fullName}`,
       html: `
         <!DOCTYPE html>
@@ -95,9 +141,11 @@ export async function POST(request: Request) {
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
 
-    console.log("✅ Email sent successfully to:", process.env.EMAIL_TO);
+    console.log("✅ Email sent successfully!");
+    console.log("📧 Message ID:", info.messageId);
+    console.log("📬 Sent to:", emailTo);
 
     return NextResponse.json(
       { message: "Form submitted successfully! We'll get back to you within 24-48 hours." },
@@ -105,8 +153,16 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     console.error("❌ Error sending email:", error);
+    
+    // More detailed error logging
+    if (error instanceof Error) {
+      console.error("Error name:", error.name);
+      console.error("Error message:", error.message);
+      console.error("Error stack:", error.stack);
+    }
+    
     return NextResponse.json(
-      { error: "Failed to send email. Please try again or contact us directly." },
+      { error: "Failed to send email. Please try again or contact us directly at vidovermedia@gmail.com" },
       { status: 500 }
     );
   }
