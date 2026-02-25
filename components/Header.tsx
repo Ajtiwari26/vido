@@ -54,16 +54,34 @@ export default function Header() {
             Service
           </Link>
           <Link
-            href="#"
-            className="px-5 py-2 rounded-full text-sm font-medium text-white hover:bg-white/30 transition-all"
+            href="/case-studies"
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              isActive("/case-studies")
+                ? "bg-white text-purple-600 shadow-md"
+                : "text-white hover:bg-white/30"
+            }`}
           >
             Case Studies
           </Link>
           <Link
-            href="#"
-            className="px-5 py-2 rounded-full text-sm font-medium text-white hover:bg-white/30 transition-all"
+            href="/blog"
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              isActive("/blog")
+                ? "bg-white text-purple-600 shadow-md"
+                : "text-white hover:bg-white/30"
+            }`}
           >
             Blog
+          </Link>
+          <Link
+            href="/process"
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              isActive("/process")
+                ? "bg-white text-purple-600 shadow-md"
+                : "text-white hover:bg-white/30"
+            }`}
+          >
+            Process
           </Link>
         </div>
 
