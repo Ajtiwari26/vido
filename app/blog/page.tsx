@@ -48,23 +48,23 @@ export default function Blog() {
   ];
 
   return (
-    <main className="pt-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
+    <main className="pt-20 bg-gradient-to-br from-[#1a0a2e] via-purple-900/60 to-pink-900/40 min-h-screen">
       {/* Hero Section */}
       <section className="px-6 py-16 max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-4">
-            Insights <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600">&amp; Strategies</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
+            Insights <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400">&amp; Strategies</span>
           </h1>
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl leading-relaxed">
+          <p className="text-white/60 text-lg md:text-xl max-w-2xl leading-relaxed">
             Expert advice on YouTube growth, content strategy, and the creator economy.
           </p>
         </div>
 
         {/* Featured Article */}
-        <div className="group relative w-full overflow-hidden rounded-3xl bg-white shadow-2xl border-2 border-purple-200 hover:border-pink-300 transition-all">
+        <div className="group relative w-full overflow-hidden rounded-3xl glass-strong border-0 shadow-2xl hover:shadow-pink-500/20 transition-all">
           <div className="grid md:grid-cols-12 gap-0">
             <div className="md:col-span-7 relative h-72 md:h-[450px] overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-500/20 z-10 mix-blend-multiply transition-opacity group-hover:opacity-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-600/40 to-purple-600/40 z-10 mix-blend-multiply transition-opacity group-hover:opacity-20"></div>
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdXLFGcbVNRj0n2GpaLJkJz-V3oq5jhaIWzHXpVtMpWScwBx84EAGYYvzWNUth7dcEPkeGv24gD8PQnwWCNMK_mBNPw1JYIv0ddJr-EBFQsmdN2wOnRIPybgy86pyAMycQqjybx60yL7ODTgnwFyFqaQsvMGXrfKGz478V4AawhfVXcITOh2KDkyVJua231LaFMPIwlxMf6h19pJ_AxFj4V_XuQxVj6mEAGRXONXOrkGRpm0cWIK4xAzRqdMuPMii1Bz0f-kg8Sck"
                 alt="Futuristic digital interface"
@@ -74,22 +74,22 @@ export default function Blog() {
               />
             </div>
             
-            <div className="md:col-span-5 flex flex-col justify-center p-8 md:p-12 lg:p-14 relative z-20 bg-gradient-to-br from-white to-purple-50">
+            <div className="md:col-span-5 flex flex-col justify-center p-8 md:p-12 lg:p-14 relative z-20 bg-gradient-to-br from-[#2d1240]/90 to-black/50 backdrop-blur-md">
               <div className="mb-6 flex items-center gap-3">
-                <span className="rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white">Featured</span>
-                <span className="text-xs text-gray-500 font-semibold tracking-wide">Oct 24, 2023 • 8 min read</span>
+                <span className="rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white">Featured</span>
+                <span className="text-xs text-white/50 font-semibold tracking-wide">Oct 24, 2023 • 8 min read</span>
               </div>
               
-              <h2 className="mb-6 text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight group-hover:text-purple-600 transition-colors">
+              <h2 className="mb-6 text-3xl lg:text-4xl font-extrabold text-white leading-tight group-hover:text-pink-300 transition-colors">
                 The Future of YouTube Automation
               </h2>
               
-              <p className="mb-8 text-gray-600 leading-relaxed text-lg">
+              <p className="mb-8 text-white/70 leading-relaxed text-lg">
                 AI and automated workflows are reshaping content creation. Discover how top creators are leveraging new tools to scale.
               </p>
               
               <div className="flex items-center gap-4">
-                <Link href="#" className="group/btn inline-flex items-center gap-2 text-purple-600 font-bold hover:gap-4 transition-all">
+                <Link href="#" className="group/btn inline-flex items-center gap-2 text-pink-400 font-bold hover:text-pink-300 hover:gap-4 transition-all">
                   Read Full Story
                   <svg className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
                     <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
@@ -107,17 +107,17 @@ export default function Blog() {
           {/* Articles Grid */}
           <div className="lg:col-span-8">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                <span className="w-8 h-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full"></span>
+              <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+                <span className="w-8 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></span>
                 Latest Articles
               </h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {articles.map((article, index) => (
-                <article key={index} className="group flex flex-col overflow-hidden rounded-2xl bg-white border-2 border-purple-200 hover:border-pink-300 hover:shadow-2xl transition-all duration-300">
+                <article key={index} className="group flex flex-col overflow-hidden rounded-2xl glass border-0 hover:bg-white/10 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300">
                   <div className="relative h-56 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/30 to-pink-500/30 opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-pink-600/40 to-purple-500/40 opacity-20 group-hover:opacity-10 transition-opacity z-10 pointer-events-none"></div>
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -126,40 +126,40 @@ export default function Blog() {
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4 z-20">
-                      <span className="rounded-lg bg-white/90 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-purple-600 uppercase tracking-wider shadow-sm">
+                      <span className="rounded-lg bg-black/60 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-pink-300 uppercase tracking-wider shadow-sm border border-white/10">
                         {article.category}
                       </span>
                     </div>
                   </div>
                   
-                  <div className="flex flex-1 flex-col p-6 bg-gradient-to-br from-white to-blue-50">
-                    <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-gray-500">
-                      <svg className="h-4 w-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-white/50">
+                      <svg className="h-4 w-4 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
                         <path clipRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fillRule="evenodd" />
                       </svg>
                       {article.readTime}
                     </div>
                     
-                    <h4 className="mb-3 text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors line-clamp-2 leading-snug">
+                    <h4 className="mb-3 text-xl font-bold text-white group-hover:text-pink-300 transition-colors line-clamp-2 leading-snug">
                       {article.title}
                     </h4>
                     
-                    <p className="mb-6 flex-1 text-sm text-gray-600 leading-relaxed line-clamp-3">
+                    <p className="mb-6 flex-1 text-sm text-white/60 leading-relaxed line-clamp-3">
                       {article.description}
                     </p>
                     
-                    <div className="flex items-center justify-between border-t border-purple-100 pt-5 mt-auto">
+                    <div className="flex items-center justify-between border-t border-white/10 pt-5 mt-auto">
                       <div className="flex items-center gap-3">
                         <Image
                           src={article.authorImage}
                           alt={article.author}
                           width={32}
                           height={32}
-                          className="h-8 w-8 rounded-full ring-2 ring-purple-100"
+                          className="h-8 w-8 rounded-full ring-2 ring-pink-500/30"
                         />
-                        <span className="text-xs font-bold text-gray-700">{article.author}</span>
+                        <span className="text-xs font-bold text-white/80">{article.author}</span>
                       </div>
-                      <svg className="h-5 w-5 text-purple-600 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="h-5 w-5 text-pink-400 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
                       </svg>
                     </div>
@@ -169,7 +169,7 @@ export default function Blog() {
             </div>
 
             <div className="mt-12 flex justify-center">
-              <button className="flex items-center justify-center gap-2 rounded-full border-2 border-purple-300 bg-white px-8 py-3 text-sm font-bold text-purple-600 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-white hover:border-transparent transition-all duration-300 shadow-lg">
+              <button className="flex items-center justify-center gap-2 rounded-full border border-white/20 glass px-8 py-3 text-sm font-bold text-white hover:bg-white/20 transition-all duration-300 shadow-lg">
                 Explore All Articles
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fillRule="evenodd" />
@@ -181,27 +181,27 @@ export default function Blog() {
           {/* Sidebar */}
           <aside className="lg:col-span-4 space-y-10">
             {/* Search */}
-            <div className="rounded-2xl bg-white p-8 shadow-lg border-2 border-purple-200">
-              <h4 className="mb-6 text-lg font-bold text-gray-900 flex items-center gap-2">
-                <svg className="h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="rounded-2xl glass-strong p-8">
+              <h4 className="mb-6 text-lg font-bold text-white flex items-center gap-2">
+                <svg className="h-5 w-5 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fillRule="evenodd" />
                 </svg>
                 Search
               </h4>
               <div className="relative group">
                 <input
-                  className="w-full rounded-xl border-2 border-purple-200 bg-purple-50/30 py-3 pl-12 pr-4 text-sm text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all"
+                  className="w-full rounded-xl border border-white/20 bg-white/5 py-3 pl-12 pr-4 text-sm text-white placeholder-white/30 focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20 outline-none transition-all"
                   placeholder="Find insights..."
                   type="text"
                 />
-                <svg className="absolute left-4 top-3.5 h-5 w-5 text-gray-400 group-focus-within:text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="absolute left-4 top-3.5 h-5 w-5 text-white/40 group-focus-within:text-pink-400" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fillRule="evenodd" />
                 </svg>
               </div>
             </div>
 
             {/* Newsletter */}
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 via-pink-500 to-blue-600 p-8 shadow-2xl text-white">
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-pink-600 via-purple-600 to-blue-600 p-8 shadow-2xl text-white">
               <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-white/20 blur-3xl"></div>
               <div className="relative z-10">
                 <h4 className="mb-3 text-2xl font-extrabold">Join the Inner Circle</h4>
@@ -210,12 +210,12 @@ export default function Blog() {
                 </p>
                 <form className="flex flex-col gap-4">
                   <input
-                    className="w-full rounded-xl border-none bg-white/20 py-3 px-5 text-sm text-white placeholder-white/70 focus:bg-white/30 focus:ring-2 focus:ring-white/50 outline-none transition-all"
+                    className="w-full rounded-xl border-none bg-black/20 py-3 px-5 text-sm text-white placeholder-white/50 focus:bg-black/30 outline-none transition-all"
                     placeholder="Your best email address"
                     type="email"
                   />
                   <button
-                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3 px-6 text-sm font-bold text-purple-600 hover:scale-[1.02] active:scale-95 shadow-lg transition-all"
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-white/20 backdrop-blur border border-white/30 py-3 px-6 text-sm font-bold text-white hover:bg-white transition-all hover:text-purple-600 shadow-lg"
                     type="button"
                   >
                     Subscribe Now
@@ -231,9 +231,9 @@ export default function Blog() {
             </div>
 
             {/* Trending */}
-            <div className="rounded-2xl bg-white p-8 shadow-lg border-2 border-purple-200">
-              <h4 className="mb-8 text-lg font-bold text-gray-900 flex items-center gap-2">
-                <svg className="h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="rounded-2xl glass-strong p-8">
+              <h4 className="mb-8 text-lg font-bold text-white flex items-center gap-2">
+                <svg className="h-5 w-5 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" fillRule="evenodd" />
                 </svg>
                 Trending Now
@@ -242,20 +242,20 @@ export default function Blog() {
                 {trendingPosts.map((post, index) => (
                   <div key={index}>
                     <Link href="#" className="group flex items-start gap-5">
-                      <span className="text-2xl font-black text-purple-100 group-hover:text-purple-600 transition-colors">
+                      <span className="text-2xl font-black text-white/20 group-hover:text-pink-400 transition-colors">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h5 className="text-sm font-bold text-gray-800 group-hover:text-purple-600 transition-colors leading-tight">
+                        <h5 className="text-sm font-bold text-white group-hover:text-pink-300 transition-colors leading-tight">
                           {post.title}
                         </h5>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter mt-1">
+                        <p className="text-[10px] font-bold text-white/30 uppercase tracking-tighter mt-1">
                           {post.date}
                         </p>
                       </div>
                     </Link>
                     {index < trendingPosts.length - 1 && (
-                      <div className="h-px w-full bg-purple-100 mt-6"></div>
+                      <div className="h-px w-full bg-white/10 mt-6"></div>
                     )}
                   </div>
                 ))}
@@ -263,14 +263,14 @@ export default function Blog() {
             </div>
 
             {/* Tags */}
-            <div className="rounded-2xl bg-white p-8 shadow-lg border-2 border-purple-200">
-              <h4 className="mb-6 text-lg font-bold text-gray-900">Explore Tags</h4>
+            <div className="rounded-2xl glass-strong p-8">
+              <h4 className="mb-6 text-lg font-bold text-white">Explore Tags</h4>
               <div className="flex flex-wrap gap-2.5">
                 {["Production", "Analytics", "Design", "Marketing", "Tutorials"].map((tag, index) => (
                   <Link
                     key={index}
                     href="#"
-                    className="rounded-lg bg-purple-50 px-4 py-2 text-xs font-bold text-gray-700 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-white transition-all shadow-sm"
+                    className="rounded-lg bg-white/10 border border-white/10 px-4 py-2 text-xs font-bold text-white hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 transition-all shadow-sm"
                   >
                     {tag}
                   </Link>

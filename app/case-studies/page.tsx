@@ -56,43 +56,43 @@ export default function CaseStudies() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-20 bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100">
-        <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-purple-400/20 blur-[120px] pointer-events-none rounded-full"></div>
+      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-20 bg-gradient-to-br from-pink-700 via-purple-700 to-blue-700">
+        <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-pink-400/20 blur-[120px] pointer-events-none rounded-full"></div>
         <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-[600px] h-[600px] bg-blue-400/20 blur-[120px] pointer-events-none rounded-full"></div>
         
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-pink-500/20 bg-white/80 backdrop-blur px-4 py-1.5 mb-8 shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 glass px-4 py-1.5 mb-8 shadow-sm">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-400"></span>
               </span>
-              <span className="text-[11px] font-bold text-pink-600 uppercase tracking-widest">New Case Studies Added</span>
+              <span className="text-[11px] font-bold text-pink-200 uppercase tracking-widest">New Case Studies Added</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-8">
               Results Driven <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600">Video Portfolio</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300">Video Portfolio</span>
             </h1>
             
-            <p className="max-w-2xl text-lg md:text-xl text-gray-600 mb-12 leading-relaxed">
+            <p className="max-w-2xl text-lg md:text-xl text-white/70 mb-12 leading-relaxed">
               High-impact video content that drives tangible results for top creators and brands. Browse our latest work and see the metrics behind the magic.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-2 p-1.5 bg-white/80 backdrop-blur border border-purple-200 shadow-sm rounded-2xl">
-              <button className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-bold shadow-md transition-all hover:shadow-lg">
+            <div className="flex flex-wrap justify-center gap-2 p-1.5 glass-strong rounded-2xl">
+              <button className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-[#1a0a2e] text-sm font-black shadow-md transition-all">
                 All Projects
               </button>
-              <button className="px-6 py-2.5 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-purple-50 text-sm font-bold transition-all">
+              <button className="px-6 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 text-sm font-bold transition-all">
                 Short Form
               </button>
-              <button className="px-6 py-2.5 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-purple-50 text-sm font-bold transition-all">
+              <button className="px-6 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 text-sm font-bold transition-all">
                 Long Form
               </button>
-              <button className="px-6 py-2.5 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-purple-50 text-sm font-bold transition-all">
+              <button className="px-6 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 text-sm font-bold transition-all">
                 Commercials
               </button>
-              <button className="px-6 py-2.5 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-purple-50 text-sm font-bold transition-all">
+              <button className="px-6 py-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/10 text-sm font-bold transition-all">
                 Documentary
               </button>
             </div>
@@ -101,11 +101,11 @@ export default function CaseStudies() {
       </section>
 
       {/* Projects Grid */}
-      <section className="pb-32 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <section className="pb-32 bg-gradient-to-br from-[#1a0a2e] via-purple-900/60 to-pink-900/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={index} className="group relative flex flex-col overflow-hidden rounded-3xl bg-white border-2 border-purple-200 shadow-lg hover:shadow-2xl hover:border-pink-300 transition-all duration-300">
+              <div key={index} className="group relative flex flex-col overflow-hidden rounded-3xl glass border-0 hover:shadow-2xl hover:shadow-pink-500/20 hover:-translate-y-2 transition-all duration-300">
                 <div className="relative aspect-video w-full overflow-hidden">
                   <Image
                     src={project.image}
@@ -114,16 +114,16 @@ export default function CaseStudies() {
                     height={400}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-600/30 to-purple-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   
                   <div className="absolute top-4 right-4 z-20">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-white/95 backdrop-blur-md px-3 py-1.5 text-xs font-black text-green-600 shadow-lg border border-white">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-black/50 backdrop-blur-md px-3 py-1.5 text-xs font-black text-green-400 border border-green-400/30 shadow-lg">
                       {project.badge}
                     </span>
                   </div>
                   
                   <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
-                    <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center text-pink-500 shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+                    <div className="h-16 w-16 rounded-full bg-white/20 backdrop-blur border border-white/30 flex items-center justify-center text-white shadow-2xl scale-90 group-hover:scale-100 transition-transform">
                       <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                       </svg>
@@ -131,20 +131,20 @@ export default function CaseStudies() {
                   </div>
                 </div>
                 
-                <div className="flex flex-col flex-1 p-6 bg-gradient-to-br from-white to-purple-50">
+                <div className="flex flex-col flex-1 p-6">
                   <div className="mb-5">
-                    <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-purple-600 transition-colors">{project.title}</h3>
-                    <p className="text-sm font-medium text-gray-500 mt-1">{project.category}</p>
+                    <h3 className="text-xl font-extrabold text-white group-hover:text-pink-300 transition-colors">{project.title}</h3>
+                    <p className="text-sm font-medium text-white/50 mt-1">{project.category}</p>
                   </div>
                   
-                  <div className="mt-auto grid grid-cols-2 gap-6 pt-6 border-t border-purple-100">
+                  <div className="mt-auto grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1.5">Challenge</p>
-                      <p className="text-xs text-gray-700 font-medium line-clamp-2">{project.challenge}</p>
+                      <p className="text-[10px] uppercase tracking-widest text-white/30 font-bold mb-1.5">Challenge</p>
+                      <p className="text-xs text-white/70 font-medium line-clamp-2">{project.challenge}</p>
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-pink-600 font-bold mb-1.5">The Result</p>
-                      <p className="text-xs text-gray-900 font-bold">{project.result}</p>
+                      <p className="text-[10px] uppercase tracking-widest text-pink-400 font-bold mb-1.5">The Result</p>
+                      <p className="text-xs text-white font-bold">{project.result}</p>
                     </div>
                   </div>
                 </div>
@@ -155,11 +155,11 @@ export default function CaseStudies() {
           {/* Featured Case Study */}
           <div className="mt-32">
             <div className="flex items-center gap-4 mb-10">
-              <h2 className="text-2xl font-black text-gray-900 whitespace-nowrap">Featured Case Study</h2>
-              <div className="h-px flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+              <h2 className="text-2xl font-black text-white whitespace-nowrap">Featured Case Study</h2>
+              <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
             </div>
             
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-white border-2 border-purple-200 shadow-2xl">
+            <div className="relative overflow-hidden rounded-[2.5rem] glass-strong shadow-2xl border border-white/20">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative min-h-[400px] lg:min-h-full overflow-hidden group">
                   <Image
@@ -169,37 +169,37 @@ export default function CaseStudies() {
                     height={600}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0a2e]/80 to-transparent"></div>
                 </div>
                 
-                <div className="flex flex-col justify-center p-10 lg:p-16 bg-gradient-to-br from-white to-blue-50">
+                <div className="flex flex-col justify-center p-10 lg:p-16 bg-gradient-to-br from-[#2d1240]/80 to-[#1a0a2e]/90">
                   <div className="mb-8 flex items-center gap-3">
-                    <span className="rounded-full bg-purple-100 px-4 py-1.5 text-xs font-black text-purple-600 border border-purple-200 tracking-wider">DOCUMENTARY</span>
-                    <span className="text-xs font-bold text-gray-500">Published 2 days ago</span>
+                    <span className="rounded-full bg-pink-500/20 px-4 py-1.5 text-xs font-black text-pink-300 border border-pink-400/30 tracking-wider">DOCUMENTARY</span>
+                    <span className="text-xs font-bold text-white/40">Published 2 days ago</span>
                   </div>
                   
-                  <h3 className="text-4xl font-black text-gray-900 mb-6 leading-tight">The Evolution of AI Content Production</h3>
+                  <h3 className="text-4xl font-black text-white mb-6 leading-tight">The Evolution of AI Content Production</h3>
                   
-                  <p className="text-gray-600 text-lg mb-10 leading-relaxed font-medium">
+                  <p className="text-white/70 text-lg mb-10 leading-relaxed font-medium">
                     We partnered with pioneering brands to create a documentary series exploring the future of generative media. The challenge was to visualize complex technical concepts while keeping the narrative grounded in human stories.
                   </p>
                   
-                  <div className="grid grid-cols-3 gap-8 mb-12 py-8 border-y border-purple-100">
+                  <div className="grid grid-cols-3 gap-8 mb-12 py-8 border-y border-white/10">
                     <div>
-                      <p className="text-4xl font-black text-purple-600">2.5M</p>
-                      <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-2">Total Views</p>
+                      <p className="text-4xl font-black text-pink-400">2.5M</p>
+                      <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold mt-2">Total Views</p>
                     </div>
                     <div>
-                      <p className="text-4xl font-black text-pink-500">45k</p>
-                      <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-2">Shares</p>
+                      <p className="text-4xl font-black text-purple-400">45k</p>
+                      <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold mt-2">Shares</p>
                     </div>
                     <div>
-                      <p className="text-4xl font-black text-green-500">98%</p>
-                      <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-2">Like Ratio</p>
+                      <p className="text-4xl font-black text-green-400">98%</p>
+                      <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold mt-2">Like Ratio</p>
                     </div>
                   </div>
                   
-                  <button className="w-fit flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all px-8 py-4 text-sm font-black text-white group shadow-lg">
+                  <button className="w-fit flex items-center gap-3 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all px-8 py-4 text-sm font-black text-[#1a0a2e] group shadow-lg shadow-pink-500/20">
                     Read Full Case Study
                     <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
                       <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
@@ -213,17 +213,17 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-blue-600">
+      <section className="py-24 relative overflow-hidden bg-gradient-to-br from-pink-600 via-purple-700 to-blue-700">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white/10 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div className="mx-auto max-w-4xl px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">Ready to create your next viral hit?</h2>
-          <p className="text-white/90 text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
             Join the top-tier creators and brands scaling their reach with Vidovermedia&apos;s world-class production expertise.
           </p>
           <Link
             href="/contact"
-            className="inline-flex h-14 items-center justify-center rounded-2xl bg-white px-10 text-lg font-black text-purple-600 shadow-xl hover:scale-105 transition-all"
+            className="inline-flex h-14 items-center justify-center rounded-2xl glass-strong px-10 text-lg font-black text-white shadow-xl hover:scale-105 hover:bg-white/20 transition-all"
           >
             Start Your Project
           </Link>

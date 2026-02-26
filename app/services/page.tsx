@@ -96,45 +96,45 @@ export default function Services() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(99,102,241,0.3)_0%,_transparent_50%)] pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(236,72,153,0.3)_0%,_transparent_50%)] pointer-events-none"></div>
+      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-pink-600 via-purple-700 to-blue-700">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(236,72,153,0.4)_0%,_transparent_50%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(99,102,241,0.4)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4 block">
+          <span className="text-sm font-bold uppercase tracking-widest text-white/50 mb-4 block">
             Services
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-[#6366f1] mb-8 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-tight">
             Content Systems Built for Scale
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-4">
             At Vidovermedia, we don&apos;t offer disconnected services. We build end-to-end content systems designed to grow attention, consistency, and revenue over time.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed font-medium">
+          <p className="text-lg text-white/70 leading-relaxed font-medium">
             Whether you&apos;re a creator, a brand, or a company looking for production support, our role is simple: we take execution off your plate — and make content work harder.
           </p>
         </div>
       </section>
 
       {/* Service Grid */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <section className="py-24 bg-gradient-to-br from-purple-900/70 via-[#2d1240] to-[#1a0a2e]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <article
                 key={index}
-                className="bg-gradient-to-br from-white to-purple-50 border-2 border-purple-200 p-10 rounded-[40px] shadow-xl flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all"
+                className="glass-strong p-10 rounded-[40px] flex flex-col hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl hover:shadow-pink-500/10 transition-all"
               >
-                <div className="flex items-center gap-3 mb-4 text-[#6366f1]">
+                <div className="flex items-center gap-3 mb-4 text-pink-400">
                   {service.icon}
-                  <h2 className="text-3xl font-bold">{service.title}</h2>
+                  <h2 className="text-3xl font-bold text-white">{service.title}</h2>
                 </div>
-                <h3 className="text-xl font-bold mb-6">{service.subtitle}</h3>
+                <h3 className="text-xl font-bold mb-6 text-white/70">{service.subtitle}</h3>
 
                 <div className="mb-8">
-                  <span className="inline-block border border-gray-300 px-3 py-1 rounded-md text-sm font-semibold mb-4">
+                  <span className="inline-block border border-white/20 px-3 py-1 rounded-md text-sm font-semibold mb-4 text-white/60">
                     What We Handle:
                   </span>
-                  <ul className="space-y-3 text-gray-600 text-sm">
+                  <ul className="space-y-3 text-white/50 text-sm">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
                         • {feature}
@@ -144,8 +144,8 @@ export default function Services() {
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="font-bold text-sm mb-2">Outcome:</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h4 className="font-bold text-sm mb-2 text-white/80">Outcome:</h4>
+                  <p className="text-white/50 text-sm leading-relaxed">
                     {service.outcome}
                   </p>
                 </div>
@@ -153,7 +153,7 @@ export default function Services() {
                 <div className="mt-auto">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center bg-[#6366f1] text-white px-8 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-colors group"
+                    className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-[#1a0a2e] px-8 py-3 rounded-xl font-black hover:from-pink-600 hover:to-purple-700 transition-all shadow-lg shadow-pink-500/20 group"
                   >
                     Learn More
                     <svg
@@ -178,21 +178,21 @@ export default function Services() {
       </section>
 
       {/* How Engagements Work */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 text-center">
+      <section className="py-24 bg-gradient-to-br from-[#1a0a2e] via-purple-900/50 to-pink-900/30 text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
             How Engagements Work
           </h2>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg text-white/50 mb-10 max-w-2xl mx-auto">
             We don&apos;t sell one-off deliverables. We work through ongoing partnerships, because content systems need time to compound.
           </p>
 
           <div className="flex flex-wrap justify-center gap-8 mb-16">
             {["Clear scope", "Predictable execution", "Results-driven collaboration"].map(
               (item, index) => (
-                <div key={index} className="flex items-center gap-2 font-medium text-slate-700">
-                  <span className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center">
-                    <svg className="w-3 h-3 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                <div key={index} className="flex items-center gap-2 font-medium text-white/70">
+                  <span className="w-5 h-5 bg-pink-500/20 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
                   </span>
@@ -202,7 +202,7 @@ export default function Services() {
             )}
           </div>
 
-          <h3 className="text-3xl md:text-4xl font-bold text-[#6366f1]">
+          <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
             Ready to Build a Content System That Pays Back?
           </h3>
         </div>

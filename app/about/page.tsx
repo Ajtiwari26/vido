@@ -10,39 +10,38 @@ export default function About() {
   return (
     <main className="pt-24">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-16 px-6 bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-30 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-br from-purple-400 via-pink-400 to-blue-400 blur-3xl"></div>
+      <section className="relative overflow-hidden pt-20 pb-16 px-6 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-700">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-40 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 blur-3xl"></div>
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
-          <span className="text-sm font-bold tracking-widest uppercase text-gray-600 mb-4 block">
+          <span className="text-sm font-bold tracking-widest uppercase text-white/50 mb-4 block">
             About
           </span>
-          <h1 className="text-6xl md:text-7xl font-extrabold text-[#5B4AF0] mb-4">
+          <h1 className="text-6xl md:text-7xl font-extrabold text-white mb-4">
             Vidovermedia
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-gray-700">
+          <p className="text-xl md:text-2xl font-medium text-pink-200">
             Turning Content Into Cashflow
           </p>
         </div>
       </section>
 
       {/* Content Card */}
-      <section className="max-w-5xl mx-auto px-6 mb-32 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 -z-10 blur-3xl"></div>
-        <div className="bg-gradient-to-br from-white via-purple-50 to-pink-50 rounded-[2rem] p-12 md:p-20 shadow-2xl border-2 border-purple-200 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-900">
+      <section className="max-w-5xl mx-auto px-6 mb-32 relative -mt-8">
+        <div className="glass-strong rounded-[2rem] p-12 md:p-20 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white">
             Turning Content Into Cashflow
           </h2>
-          <div className="space-y-8 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <div className="space-y-8 text-lg md:text-xl text-white/60 leading-relaxed max-w-3xl mx-auto">
             <p>
               Vidovermedia was built on a simple belief; content shouldn&apos;t be chaotic — and it definitely shouldn&apos;t be wasted.
             </p>
             <p>
               In a world where everyone is posting, very few are building content that compounds. Most creators and brands struggle not because they lack ideas, but because content becomes a daily operational burden instead of a scalable system.
             </p>
-            <p className="font-medium text-gray-800 italic">
+            <p className="font-medium text-pink-300 italic">
               That&apos;s where we come in.
             </p>
           </div>
@@ -50,15 +49,15 @@ export default function About() {
       </section>
 
       {/* Who We Are */}
-      <section className="max-w-7xl mx-auto px-6 mb-32 text-center bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 py-20 rounded-3xl">
-        <h2 className="text-5xl md:text-7xl font-extrabold text-[#2D2D2D] mb-6">
+      <section className="max-w-7xl mx-auto px-6 mb-32 text-center bg-gradient-to-br from-pink-800/30 via-purple-900/40 to-blue-900/30 py-20 rounded-3xl">
+        <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-6">
           Who We Are
         </h2>
-        <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-10">
+        <p className="text-xl text-white/50 max-w-2xl mx-auto mb-10">
           A behind-the-scenes content execution studio for creators an brands who value systems over hacks.
         </p>
-        <div className="inline-block bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300 rounded-full px-8 py-3 shadow-lg">
-          <p className="text-purple-700 font-semibold text-lg">
+        <div className="inline-block glass rounded-full px-8 py-3">
+          <p className="text-pink-300 font-semibold text-lg">
             We don&apos;t sell videos. We build content engines.
           </p>
         </div>
@@ -67,20 +66,20 @@ export default function About() {
       {/* Section Cards */}
       <section className="max-w-6xl mx-auto px-6 space-y-16 mb-40">
         {/* Philosophy */}
-        <div className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center border border-indigo-50 shadow-sm">
+        <div className="glass-strong rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center">
           <div className="p-10 md:p-16 md:w-1/2">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h3>
-            <ul className="space-y-4 text-xl text-gray-600">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">Our Philosophy</h3>
+            <ul className="space-y-4 text-xl text-white/60">
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 Repeatable systems over reactive trends
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 Engineered growth, not guesswork
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 Content that leads to revenue
               </li>
             </ul>
@@ -97,20 +96,20 @@ export default function About() {
         </div>
 
         {/* How We Work */}
-        <div className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row-reverse items-center border border-indigo-50 shadow-sm">
+        <div className="glass-strong rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row-reverse items-center">
           <div className="p-10 md:p-16 md:w-1/2">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">How We Work</h3>
-            <ul className="space-y-4 text-xl text-gray-600">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">How We Work</h3>
+            <ul className="space-y-4 text-xl text-white/60">
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 No freelancers to manage
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 No constant follow-ups
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 One clear workflow
               </li>
             </ul>
@@ -127,20 +126,20 @@ export default function About() {
         </div>
 
         {/* Who We Work With */}
-        <div className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center border border-indigo-50 shadow-sm">
+        <div className="glass-strong rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center">
           <div className="p-10 md:p-16 md:w-1/2">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">Who We Work With</h3>
-            <ul className="space-y-4 text-xl text-gray-600">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">Who We Work With</h3>
+            <ul className="space-y-4 text-xl text-white/60">
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 Long-term creators & media brands
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 Founders who value systems
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-4"></span>
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-4"></span>
                 Teams seeking consistency
               </li>
             </ul>
@@ -159,15 +158,15 @@ export default function About() {
 
       {/* Why Vidovermedia */}
       <section className="max-w-4xl mx-auto px-6 pb-40 text-center">
-        <h2 className="text-5xl font-extrabold text-[#2D2D2D] mb-4">
+        <h2 className="text-5xl font-extrabold text-white mb-4">
           Why Vidovermedia
         </h2>
-        <p className="text-lg text-gray-600 mb-10 max-w-xl mx-auto">
-          Because <span className="font-bold">content</span> should run in the background and pay back over time.
+        <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
+          Because <span className="font-bold text-pink-300">content</span> should run in the background and pay back over time.
         </p>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-purple-200 group"
+          className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-[#1a0a2e] px-8 py-4 rounded-xl font-black text-lg transition-all shadow-lg shadow-pink-500/20 group"
         >
           Book a Strategy Call
           <svg
