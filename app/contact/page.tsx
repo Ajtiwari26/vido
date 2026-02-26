@@ -60,40 +60,40 @@ export default function Contact() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-pink-600 via-purple-700 to-blue-700">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(236,72,153,0.4)_0%,_transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(99,102,241,0.4)_0%,_transparent_50%)]"></div>
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(255,255,255,0.2)_0%,_transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(255,192,203,0.3)_0%,_transparent_50%)]"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-white font-bold text-lg mb-4 block">
-            Contact <span className="text-white/40">us</span>
+          <span className="text-white/70 font-bold tracking-widest uppercase text-sm mb-4 block">
+            Contact Us
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Let&apos;s Build Something That Scales
           </h1>
-          <p className="text-white/70 text-lg mb-4 max-w-2xl mx-auto font-medium">
+          <p className="text-white/90 text-lg mb-4 max-w-2xl mx-auto font-medium">
             If you&apos;re serious about turning content into cashflow, we should talk.
           </p>
-          <p className="text-white/50 text-base max-w-2xl mx-auto">
+          <p className="text-white/80 text-base max-w-2xl mx-auto font-medium">
             Whether you&apos;re a creator, brand, or company looking for a reliable content system, this is the first step.
           </p>
         </div>
       </section>
 
       {/* Main Contact Content */}
-      <section className="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-br from-purple-900/50 via-[#2d1240] to-[#1a0a2e]">
+      <section className="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 border-t border-white">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Side: Content */}
-          <div className="glass-strong p-8 rounded-3xl">
-            <h2 className="text-3xl font-bold text-pink-300 mb-6">Why Reach Out?</h2>
-            <div className="space-y-4 text-white/60 mb-10 leading-relaxed">
+          <div className="bg-white/80 p-8 rounded-3xl border border-white shadow-sm">
+            <h2 className="text-3xl font-bold text-[#1a0a2e] mb-6">Why Reach Out?</h2>
+            <div className="space-y-4 text-[#1a0a2e]/70 mb-10 leading-relaxed font-medium">
               <p>If you&apos;re serious about turning content into cashflow, we should talk.</p>
               <p>
                 Whether you&apos;re a creator, brand, or company looking for a reliable content system, this is the first step.
               </p>
             </div>
 
-            <div className="glass p-6 rounded-xl mb-10">
-              <span className="text-sm font-semibold text-pink-300 mb-4 block">
+            <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl mb-10 border border-white/60">
+              <span className="text-sm font-semibold text-[#1a0a2e]/70 mb-4 block uppercase tracking-wider">
                 Use this form if you:
               </span>
               <ul className="space-y-4">
@@ -104,7 +104,7 @@ export default function Contact() {
                   "Want to explore a strategic partnership",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <span className="text-pink-400 mt-1 bg-pink-500/20 rounded-full p-1">
+                    <span className="text-pink-600 mt-1 bg-pink-100 rounded-full p-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
                           d="M5 13l4 4L19 7"
@@ -114,39 +114,39 @@ export default function Contact() {
                         />
                       </svg>
                     </span>
-                    <span className="text-white/80 font-semibold">{item}</span>
+                    <span className="text-[#1a0a2e]/80 font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="glass p-6 rounded-xl">
-              <h3 className="font-bold text-white text-lg">Prefer a Direct Conversation?</h3>
-              <p className="text-white/50 text-sm mt-2">
+            <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-white/60">
+              <h3 className="font-bold text-[#1a0a2e] text-lg">Prefer a Direct Conversation?</h3>
+              <p className="text-[#1a0a2e]/60 text-sm mt-2 font-medium">
                 If you&apos;d rather skip forms, schedule a call with our team.
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center text-pink-400 font-bold hover:text-pink-300 transition-colors text-lg mt-3"
+                className="inline-flex items-center text-pink-600 font-bold hover:text-pink-700 transition-colors text-lg mt-3 group"
               >
-                Schedule a Call <span className="ml-2">→</span>
+                Schedule a Call <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
-              <p className="text-white/30 text-xs mt-2">
+              <p className="text-[#1a0a2e]/40 text-xs mt-2 font-medium">
                 (You can connect this to Calendly or Google Calendar)
               </p>
             </div>
           </div>
 
           {/* Right Side: Form */}
-          <div className="glass-strong p-8 lg:p-12 rounded-[2rem]">
-            <h2 className="text-2xl font-bold text-white mb-8">
+          <div className="bg-white/80 p-8 lg:p-12 rounded-[2rem] border border-white shadow-sm">
+            <h2 className="text-3xl font-bold text-[#1a0a2e] mb-8">
               Tell Us About Your Project
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
               <div>
-                <label htmlFor="fullName" className="block text-sm font-semibold text-white/70 mb-2">
+                <label htmlFor="fullName" className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">
                   Full Name
                 </label>
                 <input
@@ -155,14 +155,14 @@ export default function Contact() {
                   required
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/5 text-white focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20 outline-none transition-all placeholder:text-white/30"
+                  className="w-full px-4 py-3 rounded-xl border border-pink-100 bg-white text-[#1a0a2e] focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-[#1a0a2e]/30 shadow-sm"
                   placeholder="Your name"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-white/70 mb-2">
+                <label htmlFor="email" className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">
                   Email Address
                 </label>
                 <input
@@ -171,24 +171,24 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/5 text-white focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20 outline-none transition-all placeholder:text-white/30"
+                  className="w-full px-4 py-3 rounded-xl border border-pink-100 bg-white text-[#1a0a2e] focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-[#1a0a2e]/30 shadow-sm"
                   placeholder="your@email.com"
                 />
               </div>
 
               {/* You Are A Section */}
               <div className="space-y-3">
-                <label className="block text-sm font-semibold text-white/70 mb-2">You Are A:</label>
+                <label className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">You Are A:</label>
                 <div className="grid grid-cols-2 gap-4">
                   {["Creator", "Agency", "Brand / Business", "Other"].map((role) => (
-                    <label key={role} className="flex items-center space-x-2 text-sm text-white/60">
+                    <label key={role} className="flex items-center space-x-2 text-sm font-medium text-[#1a0a2e]/70 cursor-pointer hover:text-pink-600 transition-colors">
                       <input
                         type="radio"
                         name="role"
                         value={role}
                         checked={formData.role === role}
                         onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                        className="w-4 h-4 text-pink-500 accent-pink-500"
+                        className="w-4 h-4 text-pink-500 accent-pink-500 border-pink-200 focus:ring-pink-200"
                       />
                       <span>{role}</span>
                     </label>
@@ -198,10 +198,10 @@ export default function Contact() {
 
               {/* What Are You Looking For Section */}
               <div className="space-y-3 pt-2">
-                <label className="block text-sm font-semibold text-white/70 mb-2">
+                <label className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">
                   What Are You Looking For?
                 </label>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {[
                     { value: "growth", label: "Creator Growth System" },
                     { value: "strategy", label: "Brand Content Strategy" },
@@ -211,13 +211,13 @@ export default function Contact() {
                   ].map((service) => (
                     <label
                       key={service.value}
-                      className="flex items-center space-x-2 text-sm text-white/60"
+                      className="flex items-center space-x-3 text-sm font-medium text-[#1a0a2e]/70 cursor-pointer hover:text-pink-600 transition-colors"
                     >
                       <input
                         type="checkbox"
                         checked={formData.services.includes(service.value)}
                         onChange={() => handleCheckboxChange(service.value)}
-                        className="w-4 h-4 rounded text-pink-500 accent-pink-500"
+                        className="w-4 h-4 rounded text-pink-500 accent-pink-500 border-pink-200 focus:ring-pink-200"
                       />
                       <span>{service.label}</span>
                     </label>
@@ -230,9 +230,9 @@ export default function Contact() {
                 <textarea
                   value={formData.goals}
                   onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/5 text-white focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20 outline-none transition-all placeholder:text-white/30"
+                  className="w-full px-4 py-3 rounded-xl border border-pink-100 bg-white text-[#1a0a2e] focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-[#1a0a2e]/30 shadow-sm resize-y"
                   placeholder="Briefly Describe Your Goals"
-                  rows={3}
+                  rows={4}
                 />
               </div>
 
@@ -240,7 +240,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 text-[#1a0a2e] font-black py-4 rounded-xl flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed shadow-xl shadow-pink-500/20"
+                className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-black py-4 rounded-xl flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-pink-500/20"
               >
                 <span>{isSubmitting ? "Submitting..." : "Book a Strategy Call"}</span>
                 {!isSubmitting && (
@@ -270,8 +270,8 @@ export default function Contact() {
       </section>
 
       {/* Contact Options */}
-      <section className="max-w-7xl mx-auto px-6 py-20 bg-gradient-to-br from-[#1a0a2e] via-purple-900/40 to-pink-900/20">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">Contact Options</h2>
+      <section className="max-w-7xl mx-auto px-6 py-20 bg-white border-t border-pink-50">
+        <h2 className="text-4xl font-extrabold text-center text-[#1a0a2e] mb-12">Contact Options</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
@@ -319,18 +319,20 @@ export default function Contact() {
           ].map((option, index) => (
             <div
               key={index}
-              className="glass p-8 rounded-2xl text-center hover:bg-white/15 hover:shadow-2xl hover:shadow-pink-500/10 hover:scale-105 transition-all"
+              className="bg-gradient-to-br from-pink-50 to-purple-50 border border-white p-8 rounded-3xl text-center hover:bg-white hover:shadow-xl hover:shadow-pink-500/10 hover:-translate-y-2 transition-all shadow-sm group"
             >
-              <div className="flex justify-center mb-4 text-pink-400">{option.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-2">{option.title}</h3>
-              <p className="text-white/60 font-semibold">{option.content}</p>
+              <div className="flex justify-center mb-6 text-pink-500 group-hover:scale-110 transition-transform">
+                {option.icon}
+              </div>
+              <h3 className="text-xl font-bold text-[#1a0a2e] mb-2">{option.title}</h3>
+              <p className="text-[#1a0a2e]/60 font-medium">{option.content}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center text-white/40 text-sm max-w-2xl mx-auto leading-relaxed">
+        <div className="mt-20 text-center text-[#1a0a2e]/50 text-sm max-w-2xl mx-auto font-medium">
           <p>We work with a limited number of partners each month to maintain quality and performance.</p>
-          <p>If it&apos;s a fit, we&apos;ll reach out within 24–48 hours.</p>
+          <p className="mt-1">If it&apos;s a fit, we&apos;ll reach out within 24–48 hours.</p>
         </div>
       </section>
     </main>

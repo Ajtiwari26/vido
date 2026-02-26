@@ -8,10 +8,10 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 25%, #4a1942 50%, #2d1b4e 75%, #1a0a2e 100%);
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #fce7f3 75%, #fdf2f8 100%);
   background-attachment: fixed;
   min-height: 100vh;
-  color: white;
+  color: #1a0a2e;
 }
 
 ::selection {
@@ -24,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(26, 10, 46, 0.5);
+  background: rgba(253, 242, 248, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,17 +34,17 @@ body {
 
 /* Glassmorphism utility */
 .glass {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 /* Animated gradient background */

@@ -10,7 +10,7 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-pink-600/80 via-purple-600/80 to-blue-600/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-purple-900/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-pink-400/90 via-rose-500/90 to-purple-500/90 backdrop-blur-xl border-b border-white/20 shadow-xl shadow-pink-900/10">
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -23,7 +23,7 @@ export default function Header() {
             href="/"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/")
-                ? "bg-white text-purple-700 shadow-md"
+                ? "bg-white text-pink-600 shadow-md"
                 : "text-white/90 hover:bg-white/20"
             }`}
           >
@@ -33,7 +33,7 @@ export default function Header() {
             href="/about"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/about")
-                ? "bg-white text-purple-700 shadow-md"
+                ? "bg-white text-pink-600 shadow-md"
                 : "text-white/90 hover:bg-white/20"
             }`}
           >
@@ -43,7 +43,7 @@ export default function Header() {
             href="/services"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/services")
-                ? "bg-white text-purple-700 shadow-md"
+                ? "bg-white text-pink-600 shadow-md"
                 : "text-white/90 hover:bg-white/20"
             }`}
           >
@@ -53,7 +53,7 @@ export default function Header() {
             href="/case-studies"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/case-studies")
-                ? "bg-white text-purple-700 shadow-md"
+                ? "bg-white text-pink-600 shadow-md"
                 : "text-white/90 hover:bg-white/20"
             }`}
           >
@@ -63,7 +63,7 @@ export default function Header() {
             href="/blog"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/blog")
-                ? "bg-white text-purple-700 shadow-md"
+                ? "bg-white text-pink-600 shadow-md"
                 : "text-white/90 hover:bg-white/20"
             }`}
           >
@@ -73,7 +73,7 @@ export default function Header() {
             href="/process"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/process")
-                ? "bg-white text-purple-700 shadow-md"
+                ? "bg-white text-pink-600 shadow-md"
                 : "text-white/90 hover:bg-white/20"
             }`}
           >
@@ -84,7 +84,7 @@ export default function Header() {
         {/* CTA Button */}
         <Link
           href="/contact"
-          className="bg-white text-purple-700 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-pink-100 hover:text-pink-700 transition-all shadow-lg shadow-white/10"
+          className="bg-white text-pink-600 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-pink-50 transition-all shadow-lg shadow-black/5"
         >
           Contact Us
         </Link>

@@ -2,24 +2,24 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#1a0a2e] via-[#2d1240] to-[#0d0618] text-white py-20 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-pink-50 via-rose-50 to-purple-50 text-[#1a0a2e] py-20 relative overflow-hidden">
       {/* Background Glow Effects */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-pink-600/10 blur-[150px] rounded-full pointer-events-none"></div>
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-pink-300/15 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-rose-300/15 blur-[150px] rounded-full pointer-events-none"></div>
 
       {/* Background Watermark */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none">
-        <span className="text-[20rem] font-black uppercase tracking-tighter">
+        <span className="text-[20rem] font-black uppercase tracking-tighter text-pink-500">
           Vidovermedia
         </span>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 z-10 text-center">
         {/* Footer Title */}
-        <h2 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+        <h2 className="text-6xl md:text-8xl font-black mb-4 tracking-tighter bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 bg-clip-text text-transparent">
           Vidovermedia
         </h2>
-        <p className="text-xl md:text-2xl font-bold text-pink-300 mb-16 tracking-wide">
+        <p className="text-xl md:text-2xl font-bold text-[#1a0a2e]/60 mb-16 tracking-wide">
           Turning Content Into Cashflow
         </p>
 
@@ -27,19 +27,19 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-10 mb-16">
           <Link
             href="/about"
-            className="text-white/50 hover:text-pink-300 transition font-medium"
+            className="text-[#1a0a2e]/60 hover:text-pink-600 transition font-medium"
           >
             About
           </Link>
           <Link
             href="/services"
-            className="text-white/50 hover:text-pink-300 transition font-medium"
+            className="text-[#1a0a2e]/60 hover:text-pink-600 transition font-medium"
           >
             Services
           </Link>
           <Link
             href="/contact"
-            className="text-white/50 hover:text-pink-300 transition font-medium"
+            className="text-[#1a0a2e]/60 hover:text-pink-600 transition font-medium"
           >
             Contact
           </Link>
