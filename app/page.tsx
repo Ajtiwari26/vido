@@ -144,21 +144,10 @@ export default function Home() {
       </section>
 
       {/* What We Handle Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-white via-pink-50 to-white relative overflow-hidden">
-        {/* Liquid gradient animation in background */}
-        <LiquidGradient
-          className="opacity-30"
-          colors={[
-            "rgba(236,72,153,0.2)",
-            "rgba(244,114,182,0.15)",
-            "rgba(168,85,247,0.15)",
-            "rgba(251,113,133,0.15)",
-          ]}
-        />
-
-        {/* Floating blobs */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-pink-100/50 animate-morph animate-pulse-glow blur-3xl"></div>
-        <div className="absolute bottom-20 left-0 w-72 h-72 bg-purple-100/40 animate-morph animate-pulse-glow blur-3xl" style={{ animationDelay: "2s" }}></div>
+      <section className="py-24 px-6 bg-gradient-to-br from-white via-pink-50 to-white relative">
+        {/* Floating blobs — no overflow-hidden so sticky works */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-pink-100/50 animate-morph animate-pulse-glow blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-20 left-0 w-72 h-72 bg-purple-100/40 animate-morph animate-pulse-glow blur-3xl pointer-events-none" style={{ animationDelay: "2s" }}></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <ScrollReveal>
@@ -171,7 +160,7 @@ export default function Home() {
           </ScrollReveal>
 
           {/* Service Cards — scroll-driven stacking */}
-          <StackingCards cardHeight={320} overlapPercent={90}>
+          <StackingCards>
             {[
               {
                 number: "01",

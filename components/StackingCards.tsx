@@ -1,110 +1,100 @@
 "use client";
 
-import { useEffect, useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 interface StackingCardsProps {
   children: ReactNode[];
-  cardHeight?: number;
-  overlapPercent?: number;
 }
 
-export default function StackingCards({
-  children,
-  cardHeight = 320,
-  overlapPercent = 90,
-}: StackingCardsProps) {
+export default function StackingCards({ children }: StackingCardsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [mounted, setMounted] = useState(false);
-  const cardCount = children.length;
+  const cardEls = useRef<(HTMLDivElement | null)[]>([]);
+  const frameId = useRef(0);
+  const n = children.length;
 
-  // Scroll distance per card — keep it tight so no blank gaps
-  const scrollPerCard = 100;
-  const totalScrollHeight = scrollPerCard * (cardCount - 1) + cardHeight + 200;
+  const CARD_H = 320;
+  const PEEK = 32;
+  const SCROLL_GAP = 250;
+  const STICKY_TOP = 100;
+
+  // Container tall enough so sticky stays pinned for ALL cards + buffer
+  const totalHeight = SCROLL_GAP * (n - 1) + CARD_H + 800;
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    const tick = () => {
+      const container = containerRef.current;
+      if (!container) {
+        frameId.current = requestAnimationFrame(tick);
+        return;
+      }
 
-  useEffect(() => {
-    if (!mounted) return;
+      const rect = container.getBoundingClientRect();
+      const scrolled = Math.max(0, STICKY_TOP - rect.top);
 
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
+      for (let i = 0; i < n; i++) {
+        const el = cardEls.current[i];
+        if (!el) continue;
 
-      // How far the container top has scrolled above viewport top
-      const scrolled = -rect.top;
-      const maxScroll = totalScrollHeight - window.innerHeight;
-      const progress = Math.max(0, Math.min(1, scrolled / Math.max(maxScroll, 1)));
+        if (i === 0) {
+          el.style.transform = "translateY(0px)";
+          el.style.opacity = "1";
+          continue;
+        }
 
-      setScrollProgress(progress);
+        const start = SCROLL_GAP * (i - 1);
+        const end = SCROLL_GAP * i;
+        const raw = (scrolled - start) / (end - start);
+        const t = Math.max(0, Math.min(1, raw));
+
+        // Quadratic ease-out for smooth landing
+        const ease = 1 - (1 - t) * (1 - t);
+
+        // From off-screen below to stacked position
+        const y = PEEK * i + (1 - ease) * (CARD_H + 50);
+
+        el.style.transform = `translateY(${y}px)`;
+        // Fully opaque as soon as card starts appearing (no transparency)
+        el.style.opacity = t > 0.05 ? "1" : "0";
+      }
+
+      frameId.current = requestAnimationFrame(tick);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [totalScrollHeight, mounted]);
-
-  const getCardProgress = (index: number) => {
-    if (index === 0) return 1;
-    // Each card gets an equal slice of the total scroll progress
-    const sliceSize = 1 / (cardCount - 1);
-    const cardStart = (index - 1) * sliceSize;
-    const cardEnd = index * sliceSize;
-    const progress = (scrollProgress - cardStart) / (cardEnd - cardStart);
-    return Math.max(0, Math.min(1, progress));
-  };
-
-  const overlapAmount = (cardHeight * overlapPercent) / 100;
-  const visiblePortion = cardHeight - overlapAmount;
+    frameId.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId.current);
+  }, [n]);
 
   return (
     <div
       ref={containerRef}
-      style={{
-        height: mounted ? `${totalScrollHeight}px` : `${cardHeight + 100}px`,
-        position: "relative",
-      }}
+      style={{ height: totalHeight, position: "relative" }}
     >
       <div
         style={{
           position: "sticky",
-          top: "100px",
-          height: `${cardHeight + 20}px`,
+          top: STICKY_TOP,
+          height: CARD_H + PEEK * (n - 1) + 20,
         }}
       >
-        {children.map((child, index) => {
-          const progress = getCardProgress(index);
-
-          // First card always at 0. Others: slide from below to their stacked position.
-          const stackedY = visiblePortion * index;
-          const translateY = index === 0
-            ? 0
-            : stackedY + (1 - progress) * (cardHeight + 60);
-
-          const opacity = index === 0 ? 1 : Math.max(0, Math.min(1, progress * 2));
-
-          return (
-            <div
-              key={index}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                height: `${cardHeight}px`,
-                zIndex: index + 1,
-                transform: `translateY(${translateY}px)`,
-                opacity,
-                transition: "transform 0.12s ease-out, opacity 0.15s ease-out",
-                willChange: "transform, opacity",
-              }}
-            >
-              {child}
-            </div>
-          );
-        })}
+        {children.map((child, i) => (
+          <div
+            key={i}
+            ref={(el) => { cardEls.current[i] = el; }}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: CARD_H,
+              zIndex: i + 1,
+              opacity: i === 0 ? 1 : 0,
+              willChange: "transform, opacity",
+              filter: "drop-shadow(0 -4px 20px rgba(0,0,0,0.1))",
+            }}
+          >
+            {child}
+          </div>
+        ))}
       </div>
     </div>
   );
