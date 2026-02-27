@@ -193,7 +193,7 @@ export default function Home() {
             ].map((service) => (
               <div
                 key={service.number}
-                className={`${service.color} rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center overflow-hidden shadow-xl border border-white/50 animate-gradient animate-shimmer h-full group`}
+                className={`${service.color} rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center overflow-hidden shadow-xl border border-white/50 h-full group`}
               >
                 <div className="flex-1 text-[#1a0a2e]">
                   <div className="text-6xl font-black opacity-40 mb-4 text-white group-hover:opacity-60 transition-opacity">
@@ -210,7 +210,7 @@ export default function Home() {
                     alt={service.title}
                     width={240}
                     height={240}
-                    className="w-full max-w-[240px] drop-shadow-2xl animate-float group-hover:scale-110 transition-transform duration-700"
+                    className="w-full max-w-[240px] group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>

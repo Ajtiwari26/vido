@@ -16,8 +16,6 @@ export default function StackingCards({ children }: StackingCardsProps) {
   const PEEK = 32;
   const SCROLL_GAP = 250;
   const STICKY_TOP = 100;
-
-  // Container tall enough so sticky stays pinned for ALL cards + buffer
   const totalHeight = SCROLL_GAP * (n - 1) + CARD_H + 800;
 
   useEffect(() => {
@@ -36,7 +34,7 @@ export default function StackingCards({ children }: StackingCardsProps) {
         if (!el) continue;
 
         if (i === 0) {
-          el.style.transform = "translateY(0px)";
+          el.style.transform = "translate3d(0,0,0)";
           el.style.opacity = "1";
           continue;
         }
@@ -45,15 +43,12 @@ export default function StackingCards({ children }: StackingCardsProps) {
         const end = SCROLL_GAP * i;
         const raw = (scrolled - start) / (end - start);
         const t = Math.max(0, Math.min(1, raw));
-
-        // Quadratic ease-out for smooth landing
         const ease = 1 - (1 - t) * (1 - t);
 
-        // From off-screen below to stacked position
         const y = PEEK * i + (1 - ease) * (CARD_H + 50);
 
-        el.style.transform = `translateY(${y}px)`;
-        // Fully opaque as soon as card starts appearing (no transparency)
+        // translate3d forces GPU compositing — much faster than translateY
+        el.style.transform = `translate3d(0,${y}px,0)`;
         el.style.opacity = t > 0.05 ? "1" : "0";
       }
 
@@ -88,8 +83,8 @@ export default function StackingCards({ children }: StackingCardsProps) {
               height: CARD_H,
               zIndex: i + 1,
               opacity: i === 0 ? 1 : 0,
-              willChange: "transform, opacity",
-              filter: "drop-shadow(0 -4px 20px rgba(0,0,0,0.1))",
+              willChange: "transform",
+              backfaceVisibility: "hidden",
             }}
           >
             {child}
