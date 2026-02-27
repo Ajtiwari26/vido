@@ -14,7 +14,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="Vidovermedia Logo" width={200} height={50} className="h-10 w-auto object-contain drop-shadow-lg" priority />
+          <Image src="/logo.png" alt="Vidovermedia Logo" width={200} height={50} className="h-14 w-auto object-contain drop-shadow-lg" priority />
         </Link>
 
         {/* Navigation Links */}
