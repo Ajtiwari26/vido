@@ -69,7 +69,7 @@ export default function Process() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative px-6 py-16 md:py-24 max-w-7xl mx-auto overflow-hidden bg-gradient-to-br from-pink-100 via-rose-100 to-purple-100">
+      <section className="relative px-6 py-16 md:py-24 max-w-7xl mx-auto overflow-hidden">
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-pink-300/30 blur-[120px] pointer-events-none rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-300/30 blur-[120px] pointer-events-none rounded-full"></div>
         
@@ -119,7 +119,7 @@ export default function Process() {
       </section>
 
       {/* Process Steps */}
-      <section className="px-6 py-12 max-w-7xl mx-auto bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 border-y border-white">
+      <section className="px-6 py-12 max-w-7xl mx-auto border-y border-white/40">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {steps.map((step, index) => (
             <div
@@ -161,7 +161,7 @@ export default function Process() {
       </section>
 
       {/* Why Trust Us */}
-      <section className="px-6 py-20 max-w-7xl mx-auto bg-gradient-to-br from-white via-pink-50 to-white">
+      <section className="px-6 py-20 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4 text-[#1a0a2e]">
             Why Trust Our Workflow?

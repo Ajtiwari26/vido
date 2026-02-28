@@ -10,7 +10,7 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-pink-400/90 via-rose-500/90 to-purple-500/90 backdrop-blur-xl border-b border-white/20 shadow-xl shadow-pink-900/10">
+    <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -18,13 +18,13 @@ export default function Header() {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center bg-white/10 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/20">
+        <div className="hidden md:flex items-center bg-[#1a0a2e]/80 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10">
           <Link
             href="/"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/")
-                ? "bg-white text-pink-600 shadow-md"
-                : "text-white/90 hover:bg-white/20"
+                ? "bg-white text-[#1a0a2e] shadow-md"
+                : "text-white/90 hover:bg-white/15"
             }`}
           >
             Home
@@ -33,8 +33,8 @@ export default function Header() {
             href="/about"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/about")
-                ? "bg-white text-pink-600 shadow-md"
-                : "text-white/90 hover:bg-white/20"
+                ? "bg-white text-[#1a0a2e] shadow-md"
+                : "text-white/90 hover:bg-white/15"
             }`}
           >
             About
@@ -43,8 +43,8 @@ export default function Header() {
             href="/services"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/services")
-                ? "bg-white text-pink-600 shadow-md"
-                : "text-white/90 hover:bg-white/20"
+                ? "bg-white text-[#1a0a2e] shadow-md"
+                : "text-white/90 hover:bg-white/15"
             }`}
           >
             Service
@@ -53,8 +53,8 @@ export default function Header() {
             href="/case-studies"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/case-studies")
-                ? "bg-white text-pink-600 shadow-md"
-                : "text-white/90 hover:bg-white/20"
+                ? "bg-white text-[#1a0a2e] shadow-md"
+                : "text-white/90 hover:bg-white/15"
             }`}
           >
             Case Studies
@@ -63,8 +63,8 @@ export default function Header() {
             href="/blog"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/blog")
-                ? "bg-white text-pink-600 shadow-md"
-                : "text-white/90 hover:bg-white/20"
+                ? "bg-white text-[#1a0a2e] shadow-md"
+                : "text-white/90 hover:bg-white/15"
             }`}
           >
             Blog
@@ -73,8 +73,8 @@ export default function Header() {
             href="/process"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               isActive("/process")
-                ? "bg-white text-pink-600 shadow-md"
-                : "text-white/90 hover:bg-white/20"
+                ? "bg-white text-[#1a0a2e] shadow-md"
+                : "text-white/90 hover:bg-white/15"
             }`}
           >
             Process
@@ -84,9 +84,11 @@ export default function Header() {
         {/* CTA Button */}
         <Link
           href="/contact"
-          className="bg-white text-pink-600 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-pink-50 transition-all shadow-lg shadow-black/5"
+          className="animated-border-btn pill"
         >
-          Contact Us
+          <span className="animated-border-btn-inner">
+            Contact Us →
+          </span>
         </Link>
       </nav>
     </header>

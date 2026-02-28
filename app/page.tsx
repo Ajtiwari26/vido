@@ -10,35 +10,35 @@ export default function Home() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] pt-24 pb-32 px-6 overflow-hidden bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500 animate-gradient">
+      <section className="relative min-h-[75vh] pt-24 pb-32 px-6 overflow-hidden">
         {/* Liquid animated background */}
         <LiquidGradient
           colors={[
-            "rgba(255,255,255,0.25)",
-            "rgba(236,72,153,0.3)",
-            "rgba(168,85,247,0.25)",
-            "rgba(251,113,133,0.2)",
+            "rgba(167,180,255,0.25)",
+            "rgba(236,130,200,0.2)",
+            "rgba(200,170,255,0.2)",
+            "rgba(255,200,220,0.25)",
           ]}
         />
 
         {/* Floating decorative blobs */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full animate-float blur-2xl"></div>
-        <div className="absolute top-40 right-20 w-48 h-48 bg-pink-300/20 rounded-full animate-float-delayed blur-3xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-purple-400/15 animate-morph animate-pulse-glow blur-2xl"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/25 rounded-full animate-float blur-2xl"></div>
+        <div className="absolute top-40 right-20 w-48 h-48 bg-pink-200/30 rounded-full animate-float-delayed blur-3xl"></div>
+        <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-fuchsia-200/20 animate-morph animate-pulse-glow blur-2xl"></div>
 
         {/* Spinning decorative ring */}
-        <div className="absolute top-1/4 right-10 w-40 h-40 border border-white/10 rounded-full animate-spin-slow pointer-events-none"></div>
-        <div className="absolute bottom-1/4 left-10 w-24 h-24 border border-white/15 rounded-full animate-spin-slow pointer-events-none" style={{ animationDirection: "reverse" }}></div>
+        <div className="absolute top-1/4 right-10 w-40 h-40 border border-pink-200/20 rounded-full animate-spin-slow pointer-events-none"></div>
+        <div className="absolute bottom-1/4 left-10 w-24 h-24 border border-pink-200/15 rounded-full animate-spin-slow pointer-events-none" style={{ animationDirection: "reverse" }}></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal delay={0}>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-white">
-              Create . Automate . <span className="bg-gradient-to-r from-pink-200 via-white to-pink-200 animate-text-gradient">Scale.</span>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-[#1a0a2e]">
+              Create . Automate . <span className="bg-gradient-to-r from-pink-400 via-rose-500 to-pink-400 animate-text-gradient">Scale.</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto font-medium">
+            <p className="text-lg md:text-xl text-[#1a0a2e]/70 mb-12 max-w-2xl mx-auto font-medium">
               We help creators and brands build YouTube channels<br className="hidden md:block" />
               that scale driving consistent views, engagement, and monthly revenue. 🚀
             </p>
@@ -52,9 +52,9 @@ export default function Home() {
               { stat: "20+", label: "channels scaled" },
             ].map((item, index) => (
               <ScrollReveal key={index} delay={400 + index * 150} direction="scale">
-                <div className="bg-white/20 backdrop-blur-xl border border-white/40 rounded-2xl p-6 shadow-sm animate-border-glow hover:scale-105 transition-transform duration-300">
-                  <div className="text-3xl font-extrabold text-white">{item.stat}</div>
-                  <div className="text-xs text-white/80 uppercase tracking-widest mt-1 font-semibold">
+                <div className="bg-white/50 backdrop-blur-xl border border-pink-200/40 rounded-2xl p-6 shadow-sm animate-border-glow hover:scale-105 transition-transform duration-300 min-h-[120px] flex flex-col items-center justify-center">
+                  <div className="text-3xl font-extrabold text-[#1a0a2e]">{item.stat}</div>
+                  <div className="text-xs text-[#1a0a2e]/60 uppercase tracking-widest mt-1 font-semibold">
                     {item.label}
                   </div>
                 </div>
@@ -62,28 +62,12 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Hero Buttons */}
-          <ScrollReveal delay={800}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-pink-600 px-8 py-4 rounded-xl font-bold hover:bg-pink-50 transition-all shadow-lg shadow-black/10 hover:scale-105 hover:shadow-xl animate-shimmer"
-              >
-                Book a Free Strategy Call
-              </Link>
-              <Link
-                href="#"
-                className="bg-black/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-black/30 transition-all shadow-sm hover:scale-105"
-              >
-                View Case Studies
-              </Link>
-            </div>
-          </ScrollReveal>
+
         </div>
       </section>
 
       {/* Who We Are Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 relative overflow-hidden">
+      <section className="py-24 px-6 relative overflow-hidden">
         {/* Floating decorative elements */}
         <div className="absolute top-10 right-10 w-72 h-72 bg-pink-200/30 rounded-full animate-float-slow blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-56 h-56 bg-purple-200/20 rounded-full animate-float-delayed blur-3xl"></div>
@@ -144,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* What We Handle Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-white via-pink-50 to-white relative">
+      <section className="py-24 px-6 relative">
         {/* Floating blobs — no overflow-hidden so sticky works */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-pink-100/50 animate-morph animate-pulse-glow blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-20 left-0 w-72 h-72 bg-purple-100/40 animate-morph animate-pulse-glow blur-3xl pointer-events-none" style={{ animationDelay: "2s" }}></div>
@@ -241,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* Qualification Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-pink-100 via-rose-100 to-purple-100 relative overflow-hidden animate-gradient">
+      <section className="py-24 px-6 relative overflow-hidden">
         {/* Animated background blobs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-200/40 animate-morph animate-pulse-glow blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-200/30 animate-morph animate-pulse-glow blur-3xl" style={{ animationDelay: "3s" }}></div>
@@ -327,7 +311,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-white via-pink-50 to-white relative overflow-hidden">
+      <section className="py-24 px-6 relative overflow-hidden">
         {/* Floating decorative elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-pink-100/40 rounded-full animate-float blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-purple-100/30 rounded-full animate-float-delayed blur-3xl"></div>

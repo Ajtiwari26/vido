@@ -48,14 +48,14 @@ export default function Blog() {
   ];
 
   return (
-    <main className="pt-20 bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500 min-h-screen">
+    <main className="pt-20 min-h-screen">
       {/* Hero Section */}
       <section className="px-6 py-16 max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
-            Insights <span className="text-pink-100">&amp; Strategies</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1a0a2e] tracking-tight mb-4">
+            Insights <span className="text-pink-500">&amp; Strategies</span>
           </h1>
-          <p className="text-white/90 font-medium text-lg md:text-xl max-w-2xl leading-relaxed">
+          <p className="text-[#1a0a2e]/70 font-medium text-lg md:text-xl max-w-2xl leading-relaxed">
             Expert advice on YouTube growth, content strategy, and the creator economy.
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function Blog() {
               />
             </div>
             
-            <div className="md:col-span-5 flex flex-col justify-center p-8 md:p-12 lg:p-14 relative z-20 bg-gradient-to-br from-pink-50 to-purple-50">
+            <div className="md:col-span-5 flex flex-col justify-center p-8 md:p-12 lg:p-14 relative z-20 bg-white/60 backdrop-blur">
               <div className="mb-6 flex items-center gap-3">
                 <span className="rounded-full bg-pink-100 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-pink-600">Featured</span>
                 <span className="text-xs text-[#1a0a2e]/50 font-semibold tracking-wide">Oct 24, 2023 • 8 min read</span>
@@ -107,7 +107,7 @@ export default function Blog() {
           {/* Articles Grid */}
           <div className="lg:col-span-8">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-[#1a0a2e] flex items-center gap-2">
                 <span className="w-8 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></span>
                 Latest Articles
               </h3>
@@ -181,20 +181,20 @@ export default function Blog() {
           {/* Sidebar */}
           <aside className="lg:col-span-4 space-y-10">
             {/* Search */}
-            <div className="rounded-3xl bg-white/20 backdrop-blur-md border border-white/40 shadow-sm p-8">
-              <h4 className="mb-6 text-lg font-bold text-white flex items-center gap-2">
-                <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <div className="rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm p-8">
+              <h4 className="mb-6 text-lg font-bold text-[#1a0a2e] flex items-center gap-2">
+                <svg className="h-5 w-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fillRule="evenodd" />
                 </svg>
                 Search
               </h4>
               <div className="relative group">
                 <input
-                  className="w-full rounded-2xl border border-white/40 bg-white/30 py-3 pl-12 pr-4 text-sm text-white placeholder-white/70 focus:border-white focus:bg-white/40 focus:ring-2 focus:ring-white/50 outline-none transition-all"
+                  className="w-full rounded-2xl border border-pink-100 bg-white/70 py-3 pl-12 pr-4 text-sm text-[#1a0a2e] placeholder-[#1a0a2e]/40 focus:border-pink-400 focus:bg-white focus:ring-2 focus:ring-pink-200 outline-none transition-all"
                   placeholder="Find insights..."
                   type="text"
                 />
-                <svg className="absolute left-4 top-3.5 h-5 w-5 text-white/70 group-focus-within:text-white" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="absolute left-4 top-3.5 h-5 w-5 text-[#1a0a2e]/40 group-focus-within:text-pink-500" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" fillRule="evenodd" />
                 </svg>
               </div>
@@ -231,9 +231,9 @@ export default function Blog() {
             </div>
 
             {/* Trending */}
-            <div className="rounded-3xl bg-white/20 backdrop-blur-md border border-white/40 shadow-sm p-8">
-              <h4 className="mb-8 text-lg font-bold text-white flex items-center gap-2">
-                <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <div className="rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm p-8">
+              <h4 className="mb-8 text-lg font-bold text-[#1a0a2e] flex items-center gap-2">
+                <svg className="h-5 w-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
                   <path clipRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" fillRule="evenodd" />
                 </svg>
                 Trending Now
@@ -242,20 +242,20 @@ export default function Blog() {
                 {trendingPosts.map((post, index) => (
                   <div key={index}>
                     <Link href="#" className="group flex items-start gap-5">
-                      <span className="text-2xl font-black text-white/50 group-hover:text-white transition-colors">
+                      <span className="text-2xl font-black text-[#1a0a2e]/30 group-hover:text-pink-500 transition-colors">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h5 className="text-sm font-bold text-white group-hover:text-pink-100 transition-colors leading-tight">
+                        <h5 className="text-sm font-bold text-[#1a0a2e] group-hover:text-pink-500 transition-colors leading-tight">
                           {post.title}
                         </h5>
-                        <p className="text-[10px] font-bold text-white/70 uppercase tracking-tighter mt-1">
+                        <p className="text-[10px] font-bold text-[#1a0a2e]/50 uppercase tracking-tighter mt-1">
                           {post.date}
                         </p>
                       </div>
                     </Link>
                     {index < trendingPosts.length - 1 && (
-                      <div className="h-px w-full bg-white/20 mt-6"></div>
+                      <div className="h-px w-full bg-pink-200/40 mt-6"></div>
                     )}
                   </div>
                 ))}
@@ -263,14 +263,14 @@ export default function Blog() {
             </div>
 
             {/* Tags */}
-            <div className="rounded-3xl bg-white/20 backdrop-blur-md border border-white/40 shadow-sm p-8">
-              <h4 className="mb-6 text-lg font-bold text-white">Explore Tags</h4>
+            <div className="rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm p-8">
+              <h4 className="mb-6 text-lg font-bold text-[#1a0a2e]">Explore Tags</h4>
               <div className="flex flex-wrap gap-2.5">
                 {["Production", "Analytics", "Design", "Marketing", "Tutorials"].map((tag, index) => (
                   <Link
                     key={index}
                     href="#"
-                    className="rounded-xl bg-white/30 border border-white/40 px-4 py-2 text-xs font-bold text-white hover:bg-white hover:text-pink-600 transition-all shadow-sm"
+                    className="rounded-xl bg-white/60 border border-pink-100 px-4 py-2 text-xs font-bold text-[#1a0a2e]/70 hover:bg-white hover:text-pink-600 transition-all shadow-sm"
                   >
                     {tag}
                   </Link>

@@ -10,19 +10,19 @@ export default function About() {
   return (
     <main className="pt-24">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-16 px-6 bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-40 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-br from-white via-pink-300 to-purple-400 blur-3xl"></div>
+      <section className="relative overflow-hidden pt-20 pb-16 px-6">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] opacity-30 pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-br from-pink-200 via-pink-100 to-purple-100 blur-3xl"></div>
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
-          <span className="text-sm font-bold tracking-widest uppercase text-white/70 mb-4 block">
+          <span className="text-sm font-bold tracking-widest uppercase text-[#1a0a2e]/50 mb-4 block">
             About
           </span>
-          <h1 className="text-6xl md:text-7xl font-extrabold text-white mb-4">
+          <h1 className="text-6xl md:text-7xl font-extrabold text-[#1a0a2e] mb-4">
             Vidovermedia
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-pink-100">
+          <p className="text-xl md:text-2xl font-medium text-pink-500">
             Turning Content Into Cashflow
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function About() {
       </section>
 
       {/* Who We Are */}
-      <section className="max-w-7xl mx-auto px-6 mb-32 text-center bg-gradient-to-br from-pink-100 via-rose-100 to-purple-100 py-20 rounded-3xl border border-white shadow-sm">
+      <section className="max-w-7xl mx-auto px-6 mb-32 text-center py-20 rounded-3xl border border-white/40 shadow-sm">
         <h2 className="text-5xl md:text-7xl font-extrabold text-[#1a0a2e] mb-6">
           Who We Are
         </h2>

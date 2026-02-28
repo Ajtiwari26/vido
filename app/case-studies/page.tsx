@@ -56,7 +56,7 @@ export default function CaseStudies() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-20 bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500">
+      <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-20">
         <div className="absolute top-0 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-white/30 blur-[120px] pointer-events-none rounded-full"></div>
         <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-[600px] h-[600px] bg-pink-300/40 blur-[120px] pointer-events-none rounded-full"></div>
         
@@ -67,19 +67,19 @@ export default function CaseStudies() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
-              <span className="text-[11px] font-bold text-white uppercase tracking-widest">New Case Studies Added</span>
+              <span className="text-[11px] font-bold text-[#1a0a2e]/70 uppercase tracking-widest">New Case Studies Added</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#1a0a2e] mb-8">
               Results Driven <br/>
-              <span className="text-pink-100">Video Portfolio</span>
+              <span className="text-pink-500">Video Portfolio</span>
             </h1>
             
-            <p className="max-w-2xl text-lg md:text-xl text-white/90 mb-12 font-medium leading-relaxed">
+            <p className="max-w-2xl text-lg md:text-xl text-[#1a0a2e]/70 mb-12 font-medium leading-relaxed">
               High-impact video content that drives tangible results for top creators and brands. Browse our latest work and see the metrics behind the magic.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-2 p-1.5 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-sm">
+            <div className="flex flex-wrap justify-center gap-2 p-1.5 bg-[#1a0a2e]/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm">
               <button className="px-6 py-2.5 rounded-xl bg-white text-pink-600 text-sm font-black shadow-md transition-all">
                 All Projects
               </button>
@@ -101,7 +101,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Projects Grid */}
-      <section className="pb-32 bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50">
+      <section className="pb-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-16">
             {projects.map((project, index) => (
@@ -172,7 +172,7 @@ export default function CaseStudies() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 
-                <div className="flex flex-col justify-center p-10 lg:p-16 bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 border-l border-white">
+                <div className="flex flex-col justify-center p-10 lg:p-16 bg-white/60 backdrop-blur border-l border-white/40">
                   <div className="mb-8 flex items-center gap-3">
                     <span className="rounded-full bg-pink-100 px-4 py-1.5 text-xs font-black text-pink-600 border border-pink-200 tracking-wider">DOCUMENTARY</span>
                     <span className="text-xs font-bold text-[#1a0a2e]/40">Published 2 days ago</span>
@@ -213,12 +213,12 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500">
+      <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white/20 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div className="mx-auto max-w-4xl px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">Ready to create your next viral hit?</h2>
-          <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-black text-[#1a0a2e] mb-8 tracking-tight">Ready to create your next viral hit?</h2>
+          <p className="text-[#1a0a2e]/60 text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
             Join the top-tier creators and brands scaling their reach with Vidovermedia&apos;s world-class production expertise.
           </p>
           <Link

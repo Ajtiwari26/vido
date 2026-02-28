@@ -8,7 +8,13 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #fce7f3 75%, #fdf2f8 100%);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(167,180,255,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 20%, rgba(236,130,200,0.45) 0%, transparent 55%),
+    radial-gradient(ellipse at 100% 0%, rgba(200,170,255,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 60%, rgba(255,200,220,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(255,235,245,0.5) 0%, transparent 50%),
+    linear-gradient(135deg, #e8e0ff 0%, #f8c8e8 25%, #f0a0d0 45%, #fce0f0 70%, #ffffff 100%);
   background-attachment: fixed;
   min-height: 100vh;
   color: #1a0a2e;
@@ -203,4 +209,83 @@ body {
 
 .animate-border-glow {
   animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* ===== ANIMATED REVOLVING BORDER BUTTON ===== */
+
+@keyframes rotateBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animated-border-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.animated-border-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(236, 72, 153, 0.3);
+}
+
+.animated-border-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    #ec4899 10%,
+    #f472b6 20%,
+    #db2777 30%,
+    transparent 40%,
+    transparent 60%,
+    #e879a0 70%,
+    #ec4899 80%,
+    #f9a8d4 90%,
+    transparent 100%
+  );
+  animation: rotateBorder 3s linear infinite;
+}
+
+.animated-border-btn-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #db2777;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: calc(0.75rem - 2px);
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.animated-border-btn:hover .animated-border-btn-inner {
+  background: #fdf2f8;
+}
+
+/* Pill-shaped variant for navbar */
+.animated-border-btn.pill {
+  border-radius: 9999px;
+  padding: 2px;
+}
+
+.animated-border-btn.pill .animated-border-btn-inner {
+  border-radius: 9999px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
 }

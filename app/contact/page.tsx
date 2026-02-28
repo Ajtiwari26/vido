@@ -60,27 +60,27 @@ export default function Contact() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500">
+      <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(255,255,255,0.2)_0%,_transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(255,192,203,0.3)_0%,_transparent_50%)]"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-white/70 font-bold tracking-widest uppercase text-sm mb-4 block">
+          <span className="text-[#1a0a2e]/50 font-bold tracking-widest uppercase text-sm mb-4 block">
             Contact Us
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-[#1a0a2e] mb-6 leading-tight">
             Let&apos;s Build Something That Scales
           </h1>
-          <p className="text-white/90 text-lg mb-4 max-w-2xl mx-auto font-medium">
+          <p className="text-[#1a0a2e]/70 text-lg mb-4 max-w-2xl mx-auto font-medium">
             If you&apos;re serious about turning content into cashflow, we should talk.
           </p>
-          <p className="text-white/80 text-base max-w-2xl mx-auto font-medium">
+          <p className="text-[#1a0a2e]/60 text-base max-w-2xl mx-auto font-medium">
             Whether you&apos;re a creator, brand, or company looking for a reliable content system, this is the first step.
           </p>
         </div>
       </section>
 
       {/* Main Contact Content */}
-      <section className="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 border-t border-white">
+      <section className="max-w-7xl mx-auto px-6 py-16 border-t border-white/40">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Side: Content */}
           <div className="bg-white/80 p-8 rounded-3xl border border-white shadow-sm">
@@ -270,7 +270,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Options */}
-      <section className="max-w-7xl mx-auto px-6 py-20 bg-white border-t border-pink-50">
+      <section className="max-w-7xl mx-auto px-6 py-20 border-t border-white/40">
         <h2 className="text-4xl font-extrabold text-center text-[#1a0a2e] mb-12">Contact Options</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -319,7 +319,7 @@ export default function Contact() {
           ].map((option, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-pink-50 to-purple-50 border border-white p-8 rounded-3xl text-center hover:bg-white hover:shadow-xl hover:shadow-pink-500/10 hover:-translate-y-2 transition-all shadow-sm group"
+              className="bg-white/40 backdrop-blur border border-white/60 p-8 rounded-3xl text-center hover:bg-white hover:shadow-xl hover:shadow-pink-500/10 hover:-translate-y-2 transition-all shadow-sm group"
             >
               <div className="flex justify-center mb-6 text-pink-500 group-hover:scale-110 transition-transform">
                 {option.icon}

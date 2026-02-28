@@ -96,27 +96,27 @@ export default function Services() {
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-pink-400 via-rose-500 to-purple-500">
+      <section className="relative py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.2)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(255,192,203,0.3)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4 block">
+          <span className="text-sm font-bold uppercase tracking-widest text-[#1a0a2e]/50 mb-4 block">
             Services
           </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-[#1a0a2e] mb-8 leading-tight">
             Content Systems Built for Scale
           </h1>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-4 font-medium">
+          <p className="text-lg md:text-xl text-[#1a0a2e]/70 leading-relaxed mb-4 font-medium">
             At Vidovermedia, we don&apos;t offer disconnected services. We build end-to-end content systems designed to grow attention, consistency, and revenue over time.
           </p>
-          <p className="text-lg text-white/80 leading-relaxed font-medium">
+          <p className="text-lg text-[#1a0a2e]/60 leading-relaxed font-medium">
             Whether you&apos;re a creator, a brand, or a company looking for production support, our role is simple: we take execution off your plate — and make content work harder.
           </p>
         </div>
       </section>
 
       {/* Service Grid */}
-      <section className="py-24 bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 border-t border-white">
+      <section className="py-24 border-t border-white/40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -178,7 +178,7 @@ export default function Services() {
       </section>
 
       {/* How Engagements Work */}
-      <section className="py-24 bg-white text-center border-t border-pink-100 shadow-sm relative z-10">
+      <section className="py-24 text-center border-t border-white/40 relative z-10">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#1a0a2e] mb-6">
             How Engagements Work
