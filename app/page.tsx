@@ -8,9 +8,22 @@ import StackingCards from "@/components/StackingCards";
 
 export default function Home() {
   return (
-    <main className="pt-20">
+    <main className="relative">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] pt-24 pb-32 px-6 overflow-hidden">
+      <section className="relative min-h-[75vh] pt-32 pb-32 px-6 overflow-hidden">
+        {/* Blurred Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-30 blur-xl"
+          >
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          </video>
+        </div>
+
         {/* Liquid animated background */}
         <LiquidGradient
           colors={[
@@ -150,29 +163,29 @@ export default function Home() {
                 number: "01",
                 title: "STRATEGY &\nFORMAT DESIGN",
                 description: "We analyze your niche, audience, and goals to design repeatable content formats",
-                color: "bg-gradient-to-br from-pink-200 to-rose-200",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCfpiu-ENK9oe1UYV173-jdx0FqFa9nje023Vlq7_LAB68ZlgKeUNYrmt_stEEu9plHS0njQlasujyukAjwXHMgbk8l79vTlD_vwWf_SLG9BOjaDmLQpZpOh5uSBZjAtzBO5kHwNddeUa9LWfQiLZ4BMx7aFWJezqPlW0kZ_a1IAGgVibcTlDP5ZkJGlaqur3jMwdThp0_B0z8ZwwSOgPk1Wa_bUJNUUDL13PeX2y2lmWgaLjinVdo32P6wRc8Wgyg_ATE07jq3fG4",
+                color: "bg-gradient-to-r from-pink-50 to-pink-200",
+                image: "/slidesimages/slide1.png",
               },
               {
                 number: "02",
                 title: "SCRIPTING &\nDIRECTION",
                 description: "Performance-driven scripts designed to engage and retain.",
-                color: "bg-gradient-to-br from-purple-200 to-fuchsia-200",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC4U5xfX4RPl1XMWc4pnHhPJSusjBLIDLC_Vb4m5yGWgTTqaV_K9GpG4c_2Iw0i3GBoLKUpCyrFlfqXW8AhrqWRCoWGJDJOm5wPJcO6IX-P8IY-iX9HdgKnLQU-sH49q8G8IuHL85uAe5X1PMkKZa0S7aTbdfbfc1ks6yvHgvPLSHy_IBZqVySJtzl1HTCAJ9wlQGP5NVrx65VLfLhgGUlRzSU9AIPAo5voAjPwVlU9Cz4_vQVByr3B3VOWDbRRTBL254QVcp0izg8",
+                color: "bg-gradient-to-r from-emerald-50 to-emerald-200",
+                image: "/slidesimages/slide2.png",
               },
               {
                 number: "03",
                 title: "EDITING &\nPRODUCTION",
                 description: "Polished, professional content execution delivered consistently",
-                color: "bg-gradient-to-br from-rose-200 to-pink-300",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUwgC7MhVCVvKC-XDE1g1RTEK5RCFsSjVoHNLwrZMhlCQqkv7LiDHaZ5U5NqSkWoHNJNaPFm5wkr_cY90oDZqymP1iQMOHAiySJqwG2LWmHWTJ8hBiGsY3big9DO5U2voQZny3J_UgypM7YfSRIVXgebs_lCf7YZA14RY-0tnv4Hyr5sZHImbDPncUzUegI_L014DxnvmIinqTXMeol423-8GKMyIqGPQXT9KeX4k433ixY2j5sQiYAz2lOL361Hg2J3nchZSvO8k",
+                color: "bg-gradient-to-r from-fuchsia-50 to-fuchsia-200",
+                image: "/slidesimages/slide3.png",
               },
               {
                 number: "04",
                 title: "POSTING &\nMANAGEMENT",
                 description: "Polished, professional content execution delivered consistently",
-                color: "bg-gradient-to-br from-fuchsia-200 to-purple-200",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCk3xrMWI7kW13kLEaTowRdGkfObXpBMdlJ0zj2VRXxPEAhwFDzyXoJp08HnD8LTo-qYzPG1okLinozCggrXY9oTTIO7BQKqoBwf89IzxCJD3ogzmUMWLX-41OqHyedyweEPideyVmWIBjszXF_tHS_cd0CSuzcAnzW21TGO8aAE4R1sQVeB8IKlL00OVHMIM1YYoW_LUVVAxTuGk0LfMIAJ-aDN693lnvOcRtFfTonZ9k_idBYvlrP-6LHS3yCNdRjSW-POZzlcYo",
+                color: "bg-gradient-to-r from-sky-50 to-sky-200",
+                image: "/slidesimages/slide4.png",
               },
             ].map((service) => (
               <div
@@ -180,7 +193,10 @@ export default function Home() {
                 className={`${service.color} rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center overflow-hidden shadow-xl border border-white/50 h-full group`}
               >
                 <div className="flex-1 text-[#1a0a2e]">
-                  <div className="text-6xl font-black opacity-40 mb-4 text-white group-hover:opacity-60 transition-opacity">
+                  <div 
+                    className="text-6xl font-black opacity-60 mb-4 text-white group-hover:opacity-80 transition-opacity"
+                    style={{ WebkitTextStroke: '1px rgba(26, 10, 46, 0.5)' }}
+                  >
                     {service.number}
                   </div>
                   <h3 className="text-3xl font-extrabold mb-4 uppercase tracking-tight whitespace-pre-line group-hover:translate-x-2 transition-transform">
@@ -192,9 +208,9 @@ export default function Home() {
                   <Image
                     src={service.image}
                     alt={service.title}
-                    width={240}
-                    height={240}
-                    className="w-full max-w-[240px] group-hover:scale-105 transition-transform duration-500"
+                    width={320}
+                    height={215}
+                    className="w-full max-w-[320px] rounded-lg object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
