@@ -50,14 +50,14 @@ export default function Header() {
             Service
           </Link>
           <Link
-            href="/case-studies"
+            href="/testimonials"
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-              isActive("/case-studies")
+              isActive("/testimonials")
                 ? "bg-white text-[#1a0a2e] shadow-md"
                 : "text-white/90 hover:bg-white/15"
             }`}
           >
-            Case Studies
+            Testimonials
           </Link>
           <Link
             href="/blog"
