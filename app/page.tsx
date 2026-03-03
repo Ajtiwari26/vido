@@ -5,6 +5,7 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import LiquidGradient from "@/components/LiquidGradient";
 import StackingCards from "@/components/StackingCards";
+import InfiniteScroll from "@/components/InfiniteScroll";
 
 export default function Home() {
   return (
@@ -43,9 +44,9 @@ export default function Home() {
         <div className="absolute top-1/4 right-10 w-40 h-40 border border-pink-200/20 rounded-full animate-spin-slow pointer-events-none"></div>
         <div className="absolute bottom-1/4 left-10 w-24 h-24 border border-pink-200/15 rounded-full animate-spin-slow pointer-events-none" style={{ animationDirection: "reverse" }}></div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="w-full max-w-7xl mx-auto text-center relative z-10 px-4">
           <ScrollReveal delay={0}>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-[#1a0a2e]">
+            <h1 className="text-6xl md:text-8xl lg:text-[5rem] font-black tracking-wide mb-8 text-[#1a0a2e] leading-[1.1]">
               Create . Automate . <span className="bg-gradient-to-r from-pink-400 via-rose-500 to-pink-400 animate-text-gradient">Scale.</span>
             </h1>
           </ScrollReveal>
@@ -163,22 +164,22 @@ export default function Home() {
                 number: "01",
                 title: "STRATEGY &\nFORMAT DESIGN",
                 description: "We analyze your niche, audience, and goals to design repeatable content formats",
-                color: "bg-gradient-to-r from-pink-50 to-pink-200",
-                image: "/slidesimages/slide1.png",
+                color: "bg-gradient-to-r from-fuchsia-50 to-fuchsia-200",
+                image: "/slidesimages/slide3.png",
               },
               {
                 number: "02",
                 title: "SCRIPTING &\nDIRECTION",
                 description: "Performance-driven scripts designed to engage and retain.",
-                color: "bg-gradient-to-r from-emerald-50 to-emerald-200",
-                image: "/slidesimages/slide2.png",
+                color: "bg-gradient-to-r from-pink-50 to-pink-200",
+                image: "/slidesimages/slide1.png",
               },
               {
                 number: "03",
                 title: "EDITING &\nPRODUCTION",
                 description: "Polished, professional content execution delivered consistently",
-                color: "bg-gradient-to-r from-fuchsia-50 to-fuchsia-200",
-                image: "/slidesimages/slide3.png",
+                color: "bg-gradient-to-r from-emerald-50 to-emerald-200",
+                image: "/slidesimages/slide2.png",
               },
               {
                 number: "04",
@@ -340,71 +341,32 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={200} direction="scale">
-            <div className="bg-white/80 backdrop-blur-xl border border-pink-100 rounded-[3rem] p-12 shadow-sm">
-              <h4 className="text-lg font-bold mb-8 text-[#1a0a2e]/80">Latest reviews</h4>
+            <div className="rounded-[3rem] py-12 relative group">
+              
+            
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  {
-                    rating: 4,
-                    title: "Like an In-House Team",
-                    description: "Clear strategy, strong visuals, and zero micromanagement needed.",
-                    name: "Aman Verma",
-                    role: "Founder, SaaS Startup",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuASh-nn9SoxtGNLD4pV1unjDwP1D8ChxhpiUnyRz4aPx8KfjdX2H50FK8sbeEo0i-Ke8nxqGIUSeVMo3g0tncfAwnLzAHzuk4n6bAjvF3qpoye4M5dKz-Adta0NPtJQkIOJD1UC0LDnzelCLnErEq2zokg6yO9gp8VEH0qBfKwBW8LR3PttjmlDHfv0VG_4PPd72JHr9Oh4xn4zneTNz8Vhmn5j7F1JM8WTFlugmvV89X4HbWyJj2mElnZViKWKCJx6vB-lDU7xELE",
-                  },
-                  {
-                    rating: 4,
-                    title: "Smooth & Structured Process",
-                    description: "No chasing, no confusion — just consistent, high-quality output.",
-                    name: "Ritika Sharma",
-                    role: "Marketing Director",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD04DBIGjy1EKgwhIpltb8x9_ntVkv0hi0b26E2-9YjQcojKPAc_KOjLJ1I049iwcJI0BpI71cDM27ISxeGQe0xpq49AZSjeqOcJ7X5P-dGzqpu4oiOQ-PmQ32PyrUoySU5uYq0zyHHbtQp91kJG0-gb3uQehvAF3_gUJTbrKckF6Q-jfzejorQy0rBozJJRHr1E1Ga7P16bf1YJTxu9h2to-ev_6DvXuAJROTmxGE1MTn8lsE8skp6CkX1_9X6PGG-BTrE3CWAxXE",
-                  },
-                  {
-                    rating: 4,
-                    title: "Designs That Convert.",
-                    description: "Better visuals, higher engagement, real results.",
-                    name: "Arjun Mehta",
-                    role: "YouTube Creator",
-                    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnYY4ZlKgOBCTr4R4ZK62PmHkhotdbLnQ52K4NBtPlo7G7maW9g7LWwIM_381NHTJM58nOUy0LsebpK3miGoPPztCoC9xOs4os68zgnIJl3mr2BSdr2sZfETb_HDwqdvxsxQ5yXIGlVyTL_Mt4etoFBGmEZ8d3l-LS2SVnxTTArRrGpCKj4Y-NCGK_KvKAr1o4f_c1q728No9KcLJNQJ3qm4MhokAPbUctQGx_09ZmVsonRoG1qoiPwh_KCJW-_clHkiKSsjZ-mNA",
-                  },
-                ].map((review, index) => (
-                  <ScrollReveal key={index} delay={400 + index * 200} direction="up">
-                    <div className="bg-white p-8 rounded-2xl flex flex-col justify-between hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-500/10 transition-all border border-pink-50 shadow-sm group">
-                      <div>
-                        <div className="flex text-pink-400 mb-4">
-                          {[...Array(5)].map((_, i) => (
-                            <span
-                              key={i}
-                              className={`transition-transform group-hover:scale-110 ${i < review.rating ? "" : "text-[#1a0a2e]/20"}`}
-                              style={{ transitionDelay: `${i * 50}ms` }}
-                            >
-                              ★
-                            </span>
-                          ))}
-                        </div>
-                        <h5 className="font-extrabold text-xl mb-3 text-[#1a0a2e]">{review.title}</h5>
-                        <p className="text-[#1a0a2e]/60 text-sm leading-relaxed mb-8">
-                          {review.description}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Image
-                          src={review.image}
-                          alt={review.name}
-                          width={40}
-                          height={40}
-                          className="w-10 h-10 rounded-full ring-2 ring-pink-500/30"
-                        />
-                        <div>
-                          <div className="font-bold text-sm text-[#1a0a2e]">{review.name}</div>
-                          <div className="text-xs text-[#1a0a2e]/60">{review.role}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
+              <div className="flex flex-col gap-6 relative z-10 w-full overflow-hidden">
+                <InfiniteScroll direction="left" speed={71} items={[
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.51.jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.51 (1).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.51 (2).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.51 (3).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.51 (4).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.51 (5).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.52.jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.52 (1).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.07.52 (2).jpeg"
+                ]} />
+                <InfiniteScroll direction="right" speed={71} items={[
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.16.32.jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.16.32 (1).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.17.59.jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.27.53.jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.27.54.jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.27.54 (1).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.27.54 (2).jpeg",
+                  "/thumbnails/WhatsApp Image 2026-03-04 at 00.27.54 (3).jpeg"
+                ]} />
               </div>
             </div>
           </ScrollReveal>
