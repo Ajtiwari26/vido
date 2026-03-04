@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="relative">
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] pt-32 pb-32 px-6 overflow-hidden">
+      <section className="relative min-h-[75vh] pt-32 pb-32 px-6 overflow-visible">
         {/* Blurred Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -24,6 +24,11 @@ export default function Home() {
             <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
         </div>
+        
+        {/* Extended gradient fade that goes beyond section */}
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-transparent via-transparent to-transparent z-[1] pointer-events-none" style={{
+          background: 'linear-gradient(to top, rgba(252, 224, 240, 0) 0%, rgba(252, 224, 240, 0.3) 30%, rgba(252, 224, 240, 0.6) 60%, transparent 100%)'
+        }}></div>
 
         {/* Liquid animated background */}
         <LiquidGradient

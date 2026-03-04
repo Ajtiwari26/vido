@@ -17,64 +17,64 @@ export default function Header() {
           <Image src="/logo.png" alt="Vidovermedia Logo" width={200} height={50} className="h-14 w-auto object-contain drop-shadow-lg" priority />
         </Link>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center bg-[#1a0a2e]/80 backdrop-blur-md rounded-full px-2 py-1.5 border border-white/10">
+        {/* Navigation Links - Glassmorphic */}
+        <div className="hidden md:flex items-center bg-white/20 backdrop-blur-xl rounded-full px-2 py-1.5 border border-white/30 shadow-lg">
           <Link
             href="/"
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
               isActive("/")
                 ? "bg-white text-[#1a0a2e] shadow-md"
-                : "text-white/90 hover:bg-white/15"
+                : "text-[#1a0a2e] hover:bg-white/50"
             }`}
           >
             Home
           </Link>
           <Link
             href="/about"
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
               isActive("/about")
                 ? "bg-white text-[#1a0a2e] shadow-md"
-                : "text-white/90 hover:bg-white/15"
+                : "text-[#1a0a2e] hover:bg-white/50"
             }`}
           >
             About
           </Link>
           <Link
             href="/services"
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
               isActive("/services")
                 ? "bg-white text-[#1a0a2e] shadow-md"
-                : "text-white/90 hover:bg-white/15"
+                : "text-[#1a0a2e] hover:bg-white/50"
             }`}
           >
             Service
           </Link>
           <Link
             href="/testimonials"
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
               isActive("/testimonials")
                 ? "bg-white text-[#1a0a2e] shadow-md"
-                : "text-white/90 hover:bg-white/15"
+                : "text-[#1a0a2e] hover:bg-white/50"
             }`}
           >
             Testimonials
           </Link>
           <Link
             href="/blog"
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
               isActive("/blog")
                 ? "bg-white text-[#1a0a2e] shadow-md"
-                : "text-white/90 hover:bg-white/15"
+                : "text-[#1a0a2e] hover:bg-white/50"
             }`}
           >
             Blog
           </Link>
           <Link
             href="/process"
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
               isActive("/process")
                 ? "bg-white text-[#1a0a2e] shadow-md"
-                : "text-white/90 hover:bg-white/15"
+                : "text-[#1a0a2e] hover:bg-white/50"
             }`}
           >
             Process
