@@ -52,9 +52,9 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <p className="text-lg md:text-xl text-[#1a0a2e]/70 mb-12 max-w-2xl mx-auto font-medium">
+            <p className="text-lg md:text-xl text-[#1a0a2e] mb-12 max-w-2xl mx-auto font-bold">
               We help creators and brands build YouTube channels<br className="hidden md:block" />
-              that scale driving consistent views, engagement, and monthly revenue. 🚀
+              that scale,driving consistent views, engagement, and monthly revenue. 🚀
             </p>
           </ScrollReveal>
 
