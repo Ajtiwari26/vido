@@ -27,19 +27,19 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-10 mb-16">
           <Link
             href="/about"
-            className="text-[#1a0a2e]/60 hover:text-pink-600 transition font-medium"
+            className="text-[#1a0a2e] hover:text-pink-600 transition font-bold"
           >
             About
           </Link>
           <Link
             href="/services"
-            className="text-[#1a0a2e]/60 hover:text-pink-600 transition font-medium"
+            className="text-[#1a0a2e] hover:text-pink-600 transition font-bold"
           >
             Services
           </Link>
           <Link
             href="/contact"
-            className="text-[#1a0a2e]/60 hover:text-pink-600 transition font-medium"
+            className="text-[#1a0a2e] hover:text-pink-600 transition font-bold"
           >
             Contact
           </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
             href="https://www.instagram.com/vidovermedia/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#1a0a2e]/60 hover:text-pink-500 transition transform hover:scale-110"
+            className="text-[#1a0a2e] hover:text-pink-500 transition transform hover:scale-110"
             aria-label="Instagram"
           >
             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ export default function Footer() {
             href="https://x.com/vidoverai"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#1a0a2e]/60 hover:text-pink-500 transition transform hover:scale-110"
+            className="text-[#1a0a2e] hover:text-pink-500 transition transform hover:scale-110"
             aria-label="X (Twitter)"
           >
             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,7 @@ export default function Footer() {
             href="https://www.youtube.com/@vidovermedia"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#1a0a2e]/60 hover:text-pink-500 transition transform hover:scale-110"
+            className="text-[#1a0a2e] hover:text-pink-500 transition transform hover:scale-110"
             aria-label="YouTube"
           >
             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@ export default function Footer() {
             href="https://www.linkedin.com/company/vidovermedia"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#1a0a2e]/60 hover:text-pink-500 transition transform hover:scale-110"
+            className="text-[#1a0a2e] hover:text-pink-500 transition transform hover:scale-110"
             aria-label="LinkedIn"
           >
             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -94,8 +94,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-[#1a0a2e]/10 text-[#1a0a2e]/40 text-sm">
-          © 2024 Vidovermedia
+        <div className="pt-8 border-t border-[#1a0a2e]/10 text-[#1a0a2e] text-[26px] font-bold">
+          © 2026 Vidovermedia
         </div>
       </div>
     </footer>

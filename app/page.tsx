@@ -68,7 +68,7 @@ export default function Home() {
               <ScrollReveal key={index} delay={400 + index * 150} direction="scale">
                 <div className="bg-white/50 backdrop-blur-xl border border-pink-200/40 rounded-2xl p-6 shadow-sm animate-border-glow hover:scale-105 transition-transform duration-300 min-h-[120px] flex flex-col items-center justify-center">
                   <div className="text-3xl font-extrabold text-[#1a0a2e]">{item.stat}</div>
-                  <div className="text-xs text-[#1a0a2e]/60 uppercase tracking-widest mt-1 font-semibold">
+                  <div className="text-xs text-[#1a0a2e] uppercase tracking-widest mt-1 font-semibold">
                     {item.label}
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Home() {
               <h2 className="text-4xl font-extrabold mb-8 text-[#1a0a2e]">
                 Who <span className="text-pink-500">We</span> are
               </h2>
-              <p className="text-[#1a0a2e]/80 text-lg leading-relaxed mb-8 font-medium">
+              <p className="text-[#1a0a2e] text-lg leading-relaxed mb-8 font-medium">
                 Vidovermedia is a content execution studio built for creators and brands who want more than just views. We design, produce, and manage content systems that turn consistent attention into scalable cashflow. We don&apos;t chase trends. We build repeatable content engines designed for long-term performance.
               </p>
               <Link
@@ -127,7 +127,7 @@ export default function Home() {
                     <h3 className="font-extrabold text-xl text-[#1a0a2e] mb-1">
                       {card.title}
                     </h3>
-                    <p className="text-sm text-[#1a0a2e]/60">{card.description}</p>
+                    <p className="text-sm text-[#1a0a2e]">{card.description}</p>
                   </div>
                   <div className="text-[#1a0a2e]/30 group-hover:text-pink-500 group-hover:translate-x-1 transition-all">
                     <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +151,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-extrabold mb-4 text-[#1a0a2e]">What We Handle For You</h2>
-              <p className="text-[#1a0a2e]/70 font-medium max-w-xl mx-auto">
+              <p className="text-[#1a0a2e] font-medium max-w-xl mx-auto">
                 We take content execution off your plate so you can stay focused on what adding your workload.
               </p>
             </div>
@@ -203,7 +203,7 @@ export default function Home() {
                   <h3 className="text-3xl font-extrabold mb-4 uppercase tracking-tight whitespace-pre-line group-hover:translate-x-2 transition-transform">
                     {service.title}
                   </h3>
-                  <p className="text-[#1a0a2e]/80 text-lg font-medium">{service.description}</p>
+                  <p className="text-[#1a0a2e] text-lg font-medium">{service.description}</p>
                 </div>
                 <div className="flex-1 flex justify-center">
                   <Image
@@ -253,7 +253,7 @@ export default function Home() {
               <h2 className="text-4xl font-extrabold mb-4 text-[#1a0a2e]">
                 Is Vidovermedia Right For You?
               </h2>
-              <p className="text-[#1a0a2e]/70 font-medium">
+              <p className="text-[#1a0a2e] font-medium">
                 Our best client relationships fit these categories. If you&apos;re in, let&apos;s have a conversation.
               </p>
             </div>
@@ -282,7 +282,7 @@ export default function Home() {
                           />
                         </svg>
                       </span>
-                      <span className="text-[#1a0a2e]/80 font-medium">{item}</span>
+                      <span className="text-[#1a0a2e] font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -311,7 +311,7 @@ export default function Home() {
                           />
                         </svg>
                       </span>
-                      <span className="text-[#1a0a2e]/80 font-medium">{item}</span>
+                      <span className="text-[#1a0a2e] font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -320,7 +320,7 @@ export default function Home() {
           </div>
 
           <ScrollReveal delay={600}>
-            <p className="text-center mt-12 text-sm font-semibold text-[#1a0a2e]/60">
+            <p className="text-center mt-12 text-sm font-semibold text-[#1a0a2e]">
               You stay focused on growth. We handle the rest.
             </p>
           </ScrollReveal>

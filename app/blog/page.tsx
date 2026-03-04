@@ -55,7 +55,7 @@ export default function Blog() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1a0a2e] tracking-tight mb-4">
             Insights <span className="text-pink-500">&amp; Strategies</span>
           </h1>
-          <p className="text-[#1a0a2e]/70 font-medium text-lg md:text-xl max-w-2xl leading-relaxed">
+          <p className="text-[#1a0a2e] font-medium text-lg md:text-xl max-w-2xl leading-relaxed">
             Expert advice on YouTube growth, content strategy, and the creator economy.
           </p>
         </div>
@@ -77,14 +77,14 @@ export default function Blog() {
             <div className="md:col-span-5 flex flex-col justify-center p-8 md:p-12 lg:p-14 relative z-20 bg-white/60 backdrop-blur">
               <div className="mb-6 flex items-center gap-3">
                 <span className="rounded-full bg-pink-100 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-pink-600">Featured</span>
-                <span className="text-xs text-[#1a0a2e]/50 font-semibold tracking-wide">Oct 24, 2023 • 8 min read</span>
+                <span className="text-xs text-[#1a0a2e] font-semibold tracking-wide">Oct 24, 2023 • 8 min read</span>
               </div>
               
               <h2 className="mb-6 text-3xl lg:text-4xl font-extrabold text-[#1a0a2e] leading-tight group-hover:text-pink-600 transition-colors">
                 The Future of YouTube Automation
               </h2>
               
-              <p className="mb-8 text-[#1a0a2e]/70 leading-relaxed text-lg font-medium">
+              <p className="mb-8 text-[#1a0a2e] leading-relaxed text-lg font-medium">
                 AI and automated workflows are reshaping content creation. Discover how top creators are leveraging new tools to scale.
               </p>
               
@@ -133,7 +133,7 @@ export default function Blog() {
                   </div>
                   
                   <div className="flex flex-1 flex-col p-6">
-                    <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-[#1a0a2e]/50">
+                    <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-[#1a0a2e]">
                       <svg className="h-4 w-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
                         <path clipRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" fillRule="evenodd" />
                       </svg>
@@ -144,7 +144,7 @@ export default function Blog() {
                       {article.title}
                     </h4>
                     
-                    <p className="mb-6 flex-1 text-sm text-[#1a0a2e]/70 font-medium leading-relaxed line-clamp-3">
+                    <p className="mb-6 flex-1 text-sm text-[#1a0a2e] font-medium leading-relaxed line-clamp-3">
                       {article.description}
                     </p>
                     
@@ -157,7 +157,7 @@ export default function Blog() {
                           height={32}
                           className="h-8 w-8 rounded-full ring-2 ring-pink-100"
                         />
-                        <span className="text-xs font-bold text-[#1a0a2e]/80">{article.author}</span>
+                        <span className="text-xs font-bold text-[#1a0a2e]">{article.author}</span>
                       </div>
                       <svg className="h-5 w-5 text-pink-500 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path clipRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fillRule="evenodd" />
@@ -249,7 +249,7 @@ export default function Blog() {
                         <h5 className="text-sm font-bold text-[#1a0a2e] group-hover:text-pink-500 transition-colors leading-tight">
                           {post.title}
                         </h5>
-                        <p className="text-[10px] font-bold text-[#1a0a2e]/50 uppercase tracking-tighter mt-1">
+                        <p className="text-[10px] font-bold text-[#1a0a2e] uppercase tracking-tighter mt-1">
                           {post.date}
                         </p>
                       </div>
@@ -270,7 +270,7 @@ export default function Blog() {
                   <Link
                     key={index}
                     href="#"
-                    className="rounded-xl bg-white/60 border border-pink-100 px-4 py-2 text-xs font-bold text-[#1a0a2e]/70 hover:bg-white hover:text-pink-600 transition-all shadow-sm"
+                    className="rounded-xl bg-white/60 border border-pink-100 px-4 py-2 text-xs font-bold text-[#1a0a2e] hover:bg-white hover:text-pink-600 transition-all shadow-sm"
                   >
                     {tag}
                   </Link>

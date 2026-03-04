@@ -64,16 +64,16 @@ export default function Contact() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,_rgba(255,255,255,0.2)_0%,_transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,_rgba(255,192,203,0.3)_0%,_transparent_50%)]"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-[#1a0a2e]/50 font-bold tracking-widest uppercase text-sm mb-4 block">
+          <span className="text-[#1a0a2e] font-bold tracking-widest uppercase text-sm mb-4 block">
             Contact Us
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-[#1a0a2e] mb-6 leading-tight">
             Let&apos;s Build Something That Scales
           </h1>
-          <p className="text-[#1a0a2e]/70 text-lg mb-4 max-w-2xl mx-auto font-medium">
+          <p className="text-[#1a0a2e] text-lg mb-4 max-w-2xl mx-auto font-medium">
             If you&apos;re serious about turning content into cashflow, we should talk.
           </p>
-          <p className="text-[#1a0a2e]/60 text-base max-w-2xl mx-auto font-medium">
+          <p className="text-[#1a0a2e] text-base max-w-2xl mx-auto font-medium">
             Whether you&apos;re a creator, brand, or company looking for a reliable content system, this is the first step.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function Contact() {
           {/* Left Side: Content */}
           <div className="bg-white/80 p-8 rounded-3xl border border-white shadow-sm">
             <h2 className="text-3xl font-bold text-[#1a0a2e] mb-6">Why Reach Out?</h2>
-            <div className="space-y-4 text-[#1a0a2e]/70 mb-10 leading-relaxed font-medium">
+            <div className="space-y-4 text-[#1a0a2e] mb-10 leading-relaxed font-medium">
               <p>If you&apos;re serious about turning content into cashflow, we should talk.</p>
               <p>
                 Whether you&apos;re a creator, brand, or company looking for a reliable content system, this is the first step.
@@ -93,7 +93,7 @@ export default function Contact() {
             </div>
 
             <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl mb-10 border border-white/60">
-              <span className="text-sm font-semibold text-[#1a0a2e]/70 mb-4 block uppercase tracking-wider">
+              <span className="text-sm font-semibold text-[#1a0a2e] mb-4 block uppercase tracking-wider">
                 Use this form if you:
               </span>
               <ul className="space-y-4">
@@ -114,7 +114,7 @@ export default function Contact() {
                         />
                       </svg>
                     </span>
-                    <span className="text-[#1a0a2e]/80 font-semibold">{item}</span>
+                    <span className="text-[#1a0a2e] font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -122,7 +122,7 @@ export default function Contact() {
 
             <div className="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-white/60">
               <h3 className="font-bold text-[#1a0a2e] text-lg">Prefer a Direct Conversation?</h3>
-              <p className="text-[#1a0a2e]/60 text-sm mt-2 font-medium">
+              <p className="text-[#1a0a2e] text-sm mt-2 font-medium">
                 If you&apos;d rather skip forms, schedule a call with our team.
               </p>
               <Link
@@ -131,7 +131,7 @@ export default function Contact() {
               >
                 Schedule a Call <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </Link>
-              <p className="text-[#1a0a2e]/40 text-xs mt-2 font-medium">
+              <p className="text-[#1a0a2e] text-xs mt-2 font-medium">
                 (You can connect this to Calendly or Google Calendar)
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
               <div>
-                <label htmlFor="fullName" className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">
+                <label htmlFor="fullName" className="block text-sm font-bold text-[#1a0a2e] mb-2">
                   Full Name
                 </label>
                 <input
@@ -162,7 +162,7 @@ export default function Contact() {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">
+                <label htmlFor="email" className="block text-sm font-bold text-[#1a0a2e] mb-2">
                   Email Address
                 </label>
                 <input
@@ -178,10 +178,10 @@ export default function Contact() {
 
               {/* You Are A Section */}
               <div className="space-y-3">
-                <label className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">You Are A:</label>
+                <label className="block text-sm font-bold text-[#1a0a2e] mb-2">You Are A:</label>
                 <div className="grid grid-cols-2 gap-4">
                   {["Creator", "Agency", "Brand / Business", "Other"].map((role) => (
-                    <label key={role} className="flex items-center space-x-2 text-sm font-medium text-[#1a0a2e]/70 cursor-pointer hover:text-pink-600 transition-colors">
+                    <label key={role} className="flex items-center space-x-2 text-sm font-medium text-[#1a0a2e] cursor-pointer hover:text-pink-600 transition-colors">
                       <input
                         type="radio"
                         name="role"
@@ -198,7 +198,7 @@ export default function Contact() {
 
               {/* What Are You Looking For Section */}
               <div className="space-y-3 pt-2">
-                <label className="block text-sm font-bold text-[#1a0a2e]/80 mb-2">
+                <label className="block text-sm font-bold text-[#1a0a2e] mb-2">
                   What Are You Looking For?
                 </label>
                 <div className="space-y-3">
@@ -211,7 +211,7 @@ export default function Contact() {
                   ].map((service) => (
                     <label
                       key={service.value}
-                      className="flex items-center space-x-3 text-sm font-medium text-[#1a0a2e]/70 cursor-pointer hover:text-pink-600 transition-colors"
+                      className="flex items-center space-x-3 text-sm font-medium text-[#1a0a2e] cursor-pointer hover:text-pink-600 transition-colors"
                     >
                       <input
                         type="checkbox"
@@ -325,12 +325,12 @@ export default function Contact() {
                 {option.icon}
               </div>
               <h3 className="text-xl font-bold text-[#1a0a2e] mb-2">{option.title}</h3>
-              <p className="text-[#1a0a2e]/60 font-medium">{option.content}</p>
+              <p className="text-[#1a0a2e] font-medium">{option.content}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-20 text-center text-[#1a0a2e]/50 text-sm max-w-2xl mx-auto font-medium">
+        <div className="mt-20 text-center text-[#1a0a2e] text-sm max-w-2xl mx-auto font-medium">
           <p>We work with a limited number of partners each month to maintain quality and performance.</p>
           <p className="mt-1">If it&apos;s a fit, we&apos;ll reach out within 24–48 hours.</p>
         </div>

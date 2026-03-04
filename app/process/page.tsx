@@ -84,7 +84,7 @@ export default function Process() {
               From Concept to <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500">Viral Reality</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-[#1a0a2e]/70 max-w-lg leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-[#1a0a2e] max-w-lg leading-relaxed font-medium">
               We have refined our process over hundreds of projects to ensure efficiency and creativity. Here is how we bring your vision to life.
             </p>
             
@@ -142,13 +142,13 @@ export default function Process() {
                   </span>
                 </div>
                 
-                <p className="text-[#1a0a2e]/70 leading-relaxed font-medium">
+                <p className="text-[#1a0a2e] leading-relaxed font-medium">
                   {step.description}
                 </p>
                 
                 <ul className="space-y-2 mt-2">
                   {step.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm font-semibold text-[#1a0a2e]/80">
+                    <li key={idx} className="flex items-center gap-2 text-sm font-semibold text-[#1a0a2e]">
                       <span className="text-green-500 text-lg">✓</span>
                       {feature}
                     </li>
@@ -166,7 +166,7 @@ export default function Process() {
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4 text-[#1a0a2e]">
             Why Trust Our Workflow?
           </h2>
-          <p className="text-[#1a0a2e]/60 max-w-2xl mx-auto text-lg font-medium">
+          <p className="text-[#1a0a2e] max-w-2xl mx-auto text-lg font-medium">
             We don&apos;t just edit videos; we engineer content for growth. Our process is built on data, transparency, and speed.
           </p>
         </div>
@@ -181,7 +181,7 @@ export default function Process() {
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-[#1a0a2e]">{feature.title}</h3>
-              <p className="text-sm text-[#1a0a2e]/70 leading-relaxed font-medium">
+              <p className="text-sm text-[#1a0a2e] leading-relaxed font-medium">
                 {feature.description}
               </p>
             </div>

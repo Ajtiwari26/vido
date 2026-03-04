@@ -75,12 +75,12 @@ export default function Testimonials() {
                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
                <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
              </span>
-             <span className="text-[11px] font-black text-[#1a0a2e]/70 uppercase tracking-widest">Client Success</span>
+             <span className="text-[11px] font-black text-[#1a0a2e] uppercase tracking-widest">Client Success</span>
            </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 text-[#1a0a2e] drop-shadow-sm">
             Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Testimonials</span>
           </h1>
-          <p className="max-w-2xl text-lg md:text-xl text-[#1a0a2e]/70 font-semibold leading-relaxed">
+          <p className="max-w-2xl text-lg md:text-xl text-[#1a0a2e] font-semibold leading-relaxed">
             Trusted by creators, professionals, and brands worldwide. See how we turn channels into serious growth and revenue engines.
           </p>
         </div>
@@ -186,7 +186,7 @@ export default function Testimonials() {
                              <div className={`text-2xl md:text-4xl font-black bg-clip-text text-transparent bg-gradient-to-br ${caseStudy.color} mb-1 drop-shadow-sm text-center`}>
                                {stat.value}
                              </div>
-                             <div className="text-[#1a0a2e]/60 font-black uppercase tracking-widest text-[8px] md:text-[10px] text-center">
+                             <div className="text-[#1a0a2e] font-black uppercase tracking-widest text-[8px] md:text-[10px] text-center">
                                {stat.label}
                              </div>
                            </div>
@@ -218,7 +218,7 @@ export default function Testimonials() {
                         <h4 className="flex items-center gap-2 font-black text-[#1a0a2e] uppercase tracking-wide text-xs mb-3 relative z-10">
                            <div className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></div> Context
                         </h4>
-                        <p className="text-[#1a0a2e]/70 font-semibold text-sm leading-relaxed relative z-10">
+                        <p className="text-[#1a0a2e] font-semibold text-sm leading-relaxed relative z-10">
                           {caseStudy.background}
                         </p>
                       </div>
@@ -256,7 +256,7 @@ export default function Testimonials() {
                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                    </svg>
                 </div>
-                <p className="text-[#1a0a2e]/80 text-[16px] font-medium leading-relaxed mb-8 relative z-10">
+                <p className="text-[#1a0a2e] text-[16px] font-medium leading-relaxed mb-8 relative z-10">
                   {testimonial.text}
                 </p>
               </div>
@@ -267,7 +267,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <h4 className="font-extrabold text-[#1a0a2e] text-base group-hover:text-pink-600 transition-colors">{testimonial.name}</h4>
-                  <p className="text-[#1a0a2e]/60 text-xs font-bold uppercase tracking-wide mt-0.5">{testimonial.role}</p>
+                  <p className="text-[#1a0a2e] text-xs font-bold uppercase tracking-wide mt-0.5">{testimonial.role}</p>
                 </div>
               </div>
             </div>

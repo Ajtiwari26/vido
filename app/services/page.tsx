@@ -100,16 +100,16 @@ export default function Services() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_rgba(255,255,255,0.2)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(255,192,203,0.3)_0%,_transparent_50%)] pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="text-sm font-bold uppercase tracking-widest text-[#1a0a2e]/50 mb-4 block">
+          <span className="text-sm font-bold uppercase tracking-widest text-[#1a0a2e] mb-4 block">
             Services
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-[#1a0a2e] mb-8 leading-tight">
             Content Systems Built for Scale
           </h1>
-          <p className="text-lg md:text-xl text-[#1a0a2e]/70 leading-relaxed mb-4 font-medium">
+          <p className="text-lg md:text-xl text-[#1a0a2e] leading-relaxed mb-4 font-medium">
             At Vidovermedia, we don&apos;t offer disconnected services. We build end-to-end content systems designed to grow attention, consistency, and revenue over time.
           </p>
-          <p className="text-lg text-[#1a0a2e]/60 leading-relaxed font-medium">
+          <p className="text-lg text-[#1a0a2e] leading-relaxed font-medium">
             Whether you&apos;re a creator, a brand, or a company looking for production support, our role is simple: we take execution off your plate — and make content work harder.
           </p>
         </div>
@@ -128,13 +128,13 @@ export default function Services() {
                   {service.icon}
                   <h2 className="text-3xl font-bold text-[#1a0a2e] group-hover:text-pink-600 transition-colors">{service.title}</h2>
                 </div>
-                <h3 className="text-xl font-bold mb-6 text-[#1a0a2e]/80">{service.subtitle}</h3>
+                <h3 className="text-xl font-bold mb-6 text-[#1a0a2e]">{service.subtitle}</h3>
 
                 <div className="mb-8">
                   <span className="inline-block border border-pink-200 bg-pink-100 px-3 py-1 rounded-md text-sm font-bold mb-4 text-pink-600">
                     What We Handle:
                   </span>
-                  <ul className="space-y-3 text-[#1a0a2e]/80 text-sm font-medium">
+                  <ul className="space-y-3 text-[#1a0a2e] text-sm font-medium">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
                         <span className="text-pink-500 mr-2 font-bold">•</span> {feature}
@@ -145,7 +145,7 @@ export default function Services() {
 
                 <div className="mb-8 block mt-auto pt-6 border-t border-pink-100">
                   <h4 className="font-bold text-sm mb-2 text-[#1a0a2e]">Outcome:</h4>
-                  <p className="text-[#1a0a2e]/70 text-sm leading-relaxed font-medium">
+                  <p className="text-[#1a0a2e] text-sm leading-relaxed font-medium">
                     {service.outcome}
                   </p>
                 </div>
@@ -183,14 +183,14 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#1a0a2e] mb-6">
             How Engagements Work
           </h2>
-          <p className="text-lg text-[#1a0a2e]/70 mb-10 max-w-2xl mx-auto font-medium">
+          <p className="text-lg text-[#1a0a2e] mb-10 max-w-2xl mx-auto font-medium">
             We don&apos;t sell one-off deliverables. We work through ongoing partnerships, because content systems need time to compound.
           </p>
 
           <div className="flex flex-wrap justify-center gap-8 mb-16">
             {["Clear scope", "Predictable execution", "Results-driven collaboration"].map(
               (item, index) => (
-                <div key={index} className="flex items-center gap-2 font-bold text-[#1a0a2e]/80">
+                <div key={index} className="flex items-center gap-2 font-bold text-[#1a0a2e]">
                   <span className="w-5 h-5 bg-pink-100 rounded-full flex items-center justify-center">
                     <svg className="w-3 h-3 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />

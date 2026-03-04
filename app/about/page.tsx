@@ -16,7 +16,7 @@ export default function About() {
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
-          <span className="text-sm font-bold tracking-widest uppercase text-[#1a0a2e]/50 mb-4 block">
+          <span className="text-sm font-bold tracking-widest uppercase text-[#1a0a2e] mb-4 block">
             About
           </span>
           <h1 className="text-6xl md:text-7xl font-extrabold text-[#1a0a2e] mb-4">
@@ -34,7 +34,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-10 text-[#1a0a2e]">
             Turning Content Into Cashflow
           </h2>
-          <div className="space-y-8 text-lg md:text-xl text-[#1a0a2e]/80 leading-relaxed max-w-3xl mx-auto font-medium">
+          <div className="space-y-8 text-lg md:text-xl text-[#1a0a2e] leading-relaxed max-w-3xl mx-auto font-medium">
             <p>
               Vidovermedia was built on a simple belief; content shouldn&apos;t be chaotic — and it definitely shouldn&apos;t be wasted.
             </p>
@@ -53,7 +53,7 @@ export default function About() {
         <h2 className="text-5xl md:text-7xl font-extrabold text-[#1a0a2e] mb-6">
           Who We Are
         </h2>
-        <p className="text-xl text-[#1a0a2e]/70 max-w-2xl mx-auto mb-10 font-medium">
+        <p className="text-xl text-[#1a0a2e] max-w-2xl mx-auto mb-10 font-medium">
           A behind-the-scenes content execution studio for creators and brands who value systems over hacks.
         </p>
         <div className="inline-block bg-white/80 backdrop-blur rounded-full px-8 py-3 border border-white/80">
@@ -69,7 +69,7 @@ export default function About() {
         <div className="bg-white border border-pink-50 shadow-md rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center">
           <div className="p-10 md:p-16 md:w-1/2">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a0a2e]">Our Philosophy</h3>
-            <ul className="space-y-4 text-xl text-[#1a0a2e]/80 font-medium">
+            <ul className="space-y-4 text-xl text-[#1a0a2e] font-medium">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-pink-500 rounded-full mr-4"></span>
                 Repeatable systems over reactive trends
@@ -99,7 +99,7 @@ export default function About() {
         <div className="bg-white border border-pink-50 shadow-md rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row-reverse items-center">
           <div className="p-10 md:p-16 md:w-1/2">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a0a2e]">How We Work</h3>
-            <ul className="space-y-4 text-xl text-[#1a0a2e]/80 font-medium">
+            <ul className="space-y-4 text-xl text-[#1a0a2e] font-medium">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-pink-500 rounded-full mr-4"></span>
                 No freelancers to manage
@@ -129,7 +129,7 @@ export default function About() {
         <div className="bg-white border border-pink-50 shadow-md rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row items-center">
           <div className="p-10 md:p-16 md:w-1/2">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[#1a0a2e]">Who We Work With</h3>
-            <ul className="space-y-4 text-xl text-[#1a0a2e]/80 font-medium">
+            <ul className="space-y-4 text-xl text-[#1a0a2e] font-medium">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-pink-500 rounded-full mr-4"></span>
                 Long-term creators & media brands
@@ -161,7 +161,7 @@ export default function About() {
         <h2 className="text-5xl font-extrabold text-[#1a0a2e] mb-4">
           Why Vidovermedia
         </h2>
-        <p className="text-lg text-[#1a0a2e]/70 mb-10 max-w-xl mx-auto">
+        <p className="text-lg text-[#1a0a2e] mb-10 max-w-xl mx-auto">
           Because <span className="font-bold text-pink-600">content</span> should run in the background and pay back over time.
         </p>
         <Link
