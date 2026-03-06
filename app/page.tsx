@@ -21,7 +21,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover opacity-30 blur-xl"
           >
-            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+            <source src="/hero-bg.mp4" type="video/mp4" />
           </video>
         </div>
         
@@ -163,8 +163,7 @@ export default function Home() {
           </ScrollReveal>
 
           {/* Service Cards — scroll-driven stacking */}
-          <StackingCards>
-            {[
+          <StackingCards cards={[
               {
                 number: "01",
                 title: "STRATEGY &\nFORMAT DESIGN",
@@ -193,35 +192,7 @@ export default function Home() {
                 color: "bg-gradient-to-r from-sky-50 to-sky-200",
                 image: "/slidesimages/slide4.png",
               },
-            ].map((service) => (
-              <div
-                key={service.number}
-                className={`${service.color} rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center overflow-hidden shadow-xl border border-white/50 h-full group`}
-              >
-                <div className="flex-1 text-[#1a0a2e]">
-                  <div 
-                    className="text-6xl font-black opacity-60 mb-4 text-white group-hover:opacity-80 transition-opacity"
-                    style={{ WebkitTextStroke: '1px rgba(26, 10, 46, 0.5)' }}
-                  >
-                    {service.number}
-                  </div>
-                  <h3 className="text-3xl font-extrabold mb-4 uppercase tracking-tight whitespace-pre-line group-hover:translate-x-2 transition-transform">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#1a0a2e] text-lg font-medium">{service.description}</p>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={320}
-                    height={215}
-                    className="w-full max-w-[320px] rounded-lg object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-            ))}
-          </StackingCards>
+            ]} />
 
           <ScrollReveal delay={800}>
             <div className="mt-20 text-center">

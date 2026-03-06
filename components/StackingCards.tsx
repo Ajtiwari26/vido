@@ -1,96 +1,104 @@
 "use client";
 
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
-interface StackingCardsProps {
-  children: ReactNode[];
+interface CardData {
+  number: string;
+  title: string;
+  description: string;
+  color: string;
+  image: string;
 }
 
-export default function StackingCards({ children }: StackingCardsProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cardEls = useRef<(HTMLDivElement | null)[]>([]);
-  const frameId = useRef(0);
-  const n = children.length;
+interface StackingCardsProps {
+  cards: CardData[];
+}
 
-  const CARD_H = 320;
-  const PEEK = 32;
-  const SCROLL_GAP = 250;
-  const STICKY_TOP = 100;
-  const totalHeight = SCROLL_GAP * (n - 1) + CARD_H + 800;
+export default function StackingCards({ cards }: StackingCardsProps) {
+  // We'll use IntersectionObserver to reveal cards as they scroll into view
+  const [visibleIndexes, setVisibleIndexes] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const tick = () => {
-      const container = containerRef.current;
-      if (!container) {
-        frameId.current = requestAnimationFrame(tick);
-        return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-index"));
+            setVisibleIndexes((prev) => {
+              const newSet = new Set(prev);
+              newSet.add(index);
+              return newSet;
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the card is visible
+        rootMargin: "0px 0px -50px 0px", // Trigger slightly before it fully comes into view naturally
       }
+    );
 
-      const rect = container.getBoundingClientRect();
-      const scrolled = Math.max(0, STICKY_TOP - rect.top);
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
 
-      for (let i = 0; i < n; i++) {
-        const el = cardEls.current[i];
-        if (!el) continue;
-
-        if (i === 0) {
-          el.style.transform = "translate3d(0,0,0)";
-          el.style.opacity = "1";
-          continue;
-        }
-
-        const start = SCROLL_GAP * (i - 1);
-        const end = SCROLL_GAP * i;
-        const raw = (scrolled - start) / (end - start);
-        const t = Math.max(0, Math.min(1, raw));
-        const ease = 1 - (1 - t) * (1 - t);
-
-        const y = PEEK * i + (1 - ease) * (CARD_H + 50);
-
-        // translate3d forces GPU compositing — much faster than translateY
-        el.style.transform = `translate3d(0,${y}px,0)`;
-        el.style.opacity = t > 0.05 ? "1" : "0";
-      }
-
-      frameId.current = requestAnimationFrame(tick);
-    };
-
-    frameId.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frameId.current);
-  }, [n]);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div
-      ref={containerRef}
-      style={{ height: totalHeight, position: "relative" }}
-    >
-      <div
-        style={{
-          position: "sticky",
-          top: STICKY_TOP,
-          height: CARD_H + PEEK * (n - 1) + 20,
-        }}
-      >
-        {children.map((child, i) => (
+    <div className="flex flex-col gap-16 py-10 w-full">
+      {cards.map((service, i) => {
+        const isReverse = i % 2 !== 0;
+        const isVisible = visibleIndexes.has(i);
+
+        return (
           <div
             key={i}
-            ref={(el) => { cardEls.current[i] = el; }}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              height: CARD_H,
-              zIndex: i + 1,
-              opacity: i === 0 ? 1 : 0,
-              willChange: "transform",
-              backfaceVisibility: "hidden",
-            }}
+            ref={(el) => { cardRefs.current[i] = el; }}
+            data-index={i}
+            className={`transition-all duration-1000 ease-out transform ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            }`}
           >
-            {child}
+            <div className={`flex flex-col ${isReverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 items-stretch w-full`}>
+              
+              {/* Text Card - half width */}
+              <div
+                className={`${service.color} rounded-[2rem] p-6 shadow-xl border border-white/50 w-full md:w-1/2 flex flex-col justify-center transform transition-transform duration-500 hover:scale-[1.02]`}
+              >
+                  <div 
+                    className="text-5xl md:text-6xl font-black opacity-60 mb-2 text-white"
+                    style={{ WebkitTextStroke: '1px rgba(26, 10, 46, 0.5)' }}
+                  >
+                    {service.number}
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-extrabold mb-3 uppercase tracking-tight whitespace-pre-line text-[#1a0a2e]">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#1a0a2e] text-base font-medium leading-relaxed">{service.description}</p>
+              </div>
+
+              {/* Image Element - half width */}
+              <div 
+                className={`w-full md:w-1/2 flex justify-center items-center p-4 bg-[#f2f2f2] rounded-[2rem] transition-all duration-1000 delay-300 ease-out transform ${
+                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+                }`}
+              >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={400}
+                  height={300}
+                  className="w-full max-w-[350px] object-contain hover:scale-105 transition-transform duration-500 will-change-transform mix-blend-multiply"
+                />
+              </div>
+
+            </div>
           </div>
-        ))}
-      </div>
+        );
+      })}
     </div>
   );
 }

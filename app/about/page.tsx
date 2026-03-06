@@ -86,7 +86,7 @@ export default function About() {
           </div>
           <div className="md:w-1/2 p-6 md:p-10">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp6W-5vk7UxPmoL_U4UE57g2GdLnhWMIj_JGbtsZYOusTo67G3qh04JsCJ3KVuY1U-ddJbvgqbiePUY1riVjoR5rWRylTpvlZ4W_Z30tvC4eVXhCqCrLjoHJzu5tz8eq2mQJut8T8hJd2emKLpzb74eygmLXwOfny2dVowflB8ALkVSegflC9X1n6_lENDdNzX7Dx0P0V9nzhAiGSpOzpychWnI9C2QFl7qI_qeOWkXFDQGIC8dIVV0Wk88HYg5KwIEcQu84rdvg4"
+              src="/about/about-1.jpeg"
               alt="Team collaborating"
               width={600}
               height={600}
@@ -116,7 +116,7 @@ export default function About() {
           </div>
           <div className="md:w-1/2 p-6 md:p-10">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrpybH-VJJbVlv5D2REgLFjDAXrA5m8Pumu0FHFFaZ145amj5fq2poJSH0r_76onCyz2skMrisEdhsNERRze19y2PPDLv1gVqsqmAmvdRPi2X2xVv2ZXVycGRyaZurQalL8X7TO2bOIlqjvgnIvRAIS_cpTXRri2TycpDOTw3314P85vjgy2S66zwrEE1JUYmuU4nXwLrn8Fv7HT08QG4vueXaXr29ipUtSp8Y2yAsQWEivG9ou3f9k0tyNWfBpkSGEurBukbcqd8"
+              src="/about/about-2.jpeg"
               alt="Team with laptops"
               width={600}
               height={600}
@@ -146,7 +146,7 @@ export default function About() {
           </div>
           <div className="md:w-1/2 p-6 md:p-10">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBjdCoZxThyrRj7ZTaNnm9dgBGvldjSxP-EKXTr6ziVtyj1rvcAH2b7FRqFAdMfoKyZS99Zsg4FrwAqqKnH-pz9SQFlZmUIpqNvkLO-3xpEeDtAJax4maa1legnJDcf5E81zKLDXgPkzcz3dIETBH64Dl8pknDW6GAvDVSriTEuza_f-ElkZ_AySzga8HEv5E3cnPaUvvChSuvg56uQKvKWrUCRHgUi2wO14S_IZAjJqFyuQHw9M2mGeqPSWZKKvImKM8SvXditCo"
+              src="/about/about-3.jpeg"
               alt="Team discussing"
               width={600}
               height={600}
