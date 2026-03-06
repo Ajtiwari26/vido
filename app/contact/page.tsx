@@ -172,7 +172,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl border border-pink-100 bg-white text-[#1a0a2e] focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all placeholder:text-[#1a0a2e]/30 shadow-sm"
-                  placeholder="your@email.com"
+                  placeholder="vidovermedia@gmail.com"
                 />
               </div>
 
@@ -286,22 +286,9 @@ export default function Contact() {
                 </svg>
               ),
               title: "Email",
-              content: "contact@vidovermedia.com",
+              content: "vidovermedia@gmail.com",
             },
-            {
-              icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-              ),
-              title: "Phone",
-              content: "+1 (800) 123-4567",
-            },
+
             {
               icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
