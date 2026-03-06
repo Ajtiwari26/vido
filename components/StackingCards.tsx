@@ -91,7 +91,7 @@ export default function StackingCards({ cards }: StackingCardsProps) {
                   alt={service.title}
                   width={400}
                   height={300}
-                  className="w-full max-w-[350px] object-contain hover:scale-105 transition-transform duration-500 will-change-transform mix-blend-multiply"
+                  className="w-full max-w-[350px] object-contain hover:scale-105 transition-transform duration-500 will-change-transform mix-blend-darken"
                 />
               </div>
 
